@@ -1,0 +1,12 @@
+$ .venv/Scripts/ruff.exe check frontend_lake scripts tests
+All checks passed!
+exit=0
+
+$ .venv/Scripts/ruff.exe format --check frontend_lake scripts tests
+18 files already formatted
+exit=0
+
+$ C:\Users\Aidors\Documents\ChatGPT\temp\.venv\Scripts\python.exe -m pytest -q
+......................                                                   [100%]
+22 passed in 2.51s
+exit=0

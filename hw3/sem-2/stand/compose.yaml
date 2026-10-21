@@ -1,0 +1,188 @@
+name: hh-stand  # Имя проекта
+
+# HDFS (NameNode + 4 DataNode + клиент), S3-совместимое хранилище RustFS из четырёх узлов и контейнер с AWS CLI.
+# Конфигурация Hadoop лежит в hadoop.env
+#
+# Профиль home (docker compose --profile home up -d rustfs-home) поднимает RustFS для ДЗ 2
+
+# Заготовка для всех машин Hadoop/ &hadoop - это имя заготовки
+x-hadoop: &hadoop  
+  image: apache/hadoop:3.4.1
+  env_file: hadoop.env
+  networks: [stand]
+  restart: "no"          # узел, остановленный для демонстрации отказа, не должен воскресать сам, иначе докер сам рестартнет через секунду его
+
+x-rustfs: &rustfs
+  image: rustfs/rustfs:1.0.0
+  networks: [stand]
+  restart: "no"
+  environment:
+    RUSTFS_ACCESS_KEY: ${S3_ACCESS_KEY:-hhadmin}  # ключ из переменной окружения если он етсь
+    RUSTFS_SECRET_KEY: ${S3_SECRET_KEY:-hhadmin-secret}
+    RUSTFS_VOLUMES: http://rustfs{1...4}:9000/data    # четыре узла, erasure coding 2+2 {1...4} как раз означают 4 узла
+    RUSTFS_ADDRESS: ":9000"
+    RUSTFS_CONSOLE_ADDRESS: ":9001"
+
+services:
+  namenode:
+    <<: *hadoop  # берем всё из &hadoop
+    hostname: namenode  # имя в сети
+    container_name: hh-namenode  # имя для команд докеру
+    # Процесс NameNode завёрнут в bash, чтобы контейнер переживал его смерть на семинаре. Можно запускать просто hdfs namenode
+    command: ["bash", "-c", "hdfs namenode; echo 'namenode process exited, container stays up'; sleep infinity"]
+    environment:
+      ENSURE_NAMENODE_DIR: /data/namenode/current   # форматирование только при первом запуске
+      HDFS_NAMENODE_OPTS: -Xms1g -Xmx2g  # Память Java для NameNode: от одного до двух гигабайт
+    ports:
+      - "9870:9870"      # веб-интерфейс NameNode
+    volumes:
+      - namenode:/data  # Том с именем namenode подключён внутрь машины как папка /data. В ней таблица файлов
+
+  dn1:
+    <<: *hadoop
+    hostname: dn1
+    container_name: hh-dn1
+    command: ["hdfs", "datanode"]
+    environment: &dn-env
+      WAITFOR: namenode:8020
+      HDFS_DATANODE_OPTS: -Xms256m -Xmx768m  # 256мб-768мб
+    volumes:
+      - dn1:/data
+    depends_on: [namenode]  # говорим compose что стартуем после namenode
+
+  dn2:
+    <<: *hadoop
+    hostname: dn2
+    container_name: hh-dn2
+    command: ["hdfs", "datanode"]
+    environment: *dn-env
+    volumes:
+      - dn2:/data
+    depends_on: [namenode]
+
+  dn3:
+    <<: *hadoop
+    hostname: dn3
+    container_name: hh-dn3
+    command: ["hdfs", "datanode"]
+    environment: *dn-env
+    volumes:
+      - dn3:/data
+    depends_on: [namenode]
+
+  dn4:
+    <<: *hadoop
+    hostname: dn4
+    container_name: hh-dn4
+    command: ["hdfs", "datanode"]
+    environment: *dn-env
+    volumes:
+      - dn4:/data
+    depends_on: [namenode]
+
+  client:
+    <<: *hadoop
+    hostname: client
+    container_name: hh-client
+    command: ["sleep", "infinity"]
+    environment:
+      WAITFOR: namenode:8020
+      HADOOP_OPTIONAL_TOOLS: hadoop-aws     # чтобы hdfs dfs понимал s3a://
+      HADOOP_CLIENT_OPTS: -Xmx1g
+    volumes:
+      - ${COURSE_DATA:-D:/ITMO_course_DE/data/hh-2024/course}:/course:ro  # путь к файлам
+      - ${PARTS_DATA:-D:/ITMO_course_DE/data/hh-2024/vacancies_cl1.csv}:/parts:ro
+    depends_on: [namenode]
+
+
+# Четыре узла объектного хранилища
+  rustfs1:
+    <<: *rustfs
+    hostname: rustfs1
+    container_name: hh-rustfs1
+    ports:
+      - "9000:9000"      # S3 API
+      - "9001:9001"      # консоль. Порты наружу даем только первому, остальные общаются внутри сети
+    volumes:
+      - rustfs1:/data    # кстати вы можете привязывать их к локальной папке на ПК и таким образом обрабатывать даннеы
+      - rustfs1-logs:/logs
+
+  rustfs2:
+    <<: *rustfs
+    hostname: rustfs2
+    container_name: hh-rustfs2
+    volumes:
+      - rustfs2:/data
+      - rustfs2-logs:/logs
+
+  rustfs3:
+    <<: *rustfs
+    hostname: rustfs3
+    container_name: hh-rustfs3
+    volumes:
+      - rustfs3:/data
+      - rustfs3-logs:/logs
+
+  rustfs4:
+    <<: *rustfs
+    hostname: rustfs4
+    container_name: hh-rustfs4
+    volumes:
+      - rustfs4:/data
+      - rustfs4-logs:/logs
+
+# Машина с AWS CLI, стандартной программой для работы с S3. 
+# Ей заранее выданы ключи и адрес http://rustfs1:9000, 
+# поэтому команда aws s3 ls внутри неё сразу видит наше хранилище, а не Amazon)
+  s3cli:
+    image: amazon/aws-cli:2.36.45
+    container_name: hh-s3cli
+    networks: [stand]
+    restart: "no"
+    entrypoint: ["sh", "-c", "sleep infinity"]
+    environment:
+      AWS_ACCESS_KEY_ID: ${S3_ACCESS_KEY:-hhadmin}
+      AWS_SECRET_ACCESS_KEY: ${S3_SECRET_KEY:-hhadmin-secret}
+      AWS_DEFAULT_REGION: us-east-1
+      AWS_ENDPOINT_URL: http://rustfs1:9000
+      AWS_EC2_METADATA_DISABLED: "true"
+    volumes:
+      - ${COURSE_DATA:-D:/AI/ITMO_course_DE/data/hh-2024/course}:/course:ro
+    depends_on: [rustfs1]
+
+  # Домашний вариант для ДЗ 2: один процесс, четыре папки на одном диске.
+  rustfs-home:
+    image: rustfs/rustfs:1.0.0
+    container_name: hh-rustfs-home
+    profiles: ["home"]  # собственно профиль home
+    networks: [stand]
+    restart: "no"
+    environment:
+      RUSTFS_ACCESS_KEY: ${S3_ACCESS_KEY:-hhadmin}
+      RUSTFS_SECRET_KEY: ${S3_SECRET_KEY:-hhadmin-secret}
+      RUSTFS_VOLUMES: /data/vol{1...4}
+      RUSTFS_UNSAFE_BYPASS_DISK_CHECK: "true"     # четыре папки на одном физическом диске: только для учёбы
+    ports:
+      - "9010:9000"
+      - "9011:9001"
+    volumes:
+      - rustfs-home:/data
+
+networks:
+  stand:
+
+volumes:
+  namenode:
+  dn1:
+  dn2:
+  dn3:
+  dn4:
+  rustfs1:
+  rustfs2:
+  rustfs3:
+  rustfs4:
+  rustfs1-logs:
+  rustfs2-logs:
+  rustfs3-logs:
+  rustfs4-logs:
+  rustfs-home:

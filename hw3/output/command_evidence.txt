@@ -1,0 +1,159 @@
+$ docker ps --filter name=frontend-hw8-rustfs --format {{.Names}} | {{.Status}} | {{.Ports}}
+frontend-hw8-rustfs | Up 8 hours | 127.0.0.1:9010->9000/tcp, 127.0.0.1:9011->9001/tcp
+
+exit=0
+
+$ docker logs --tail 10 frontend-hw8-rustfs
+Initializing data directories: /data/vol1 /data/vol2 /data/vol3 /data/vol4
+Initializing log directory: /logs
+Starting: /usr/bin/rustfs  /data/vol1 /data/vol2 /data/vol3 /data/vol4
+
+exit=0
+
+$ docker inspect frontend-hw8-rustfs --format {{json .Mounts}}
+[{"Type":"bind","Source":"C:\\Users\\Aidors\\Documents\\ChatGPT\\temp\\storage","Destination":"/data","Mode":"rw","RW":true,"Propagation":"rprivate"}]
+
+exit=0
+
+$ docker image inspect rustfs/rustfs:1.0.0 --format {{json .RepoDigests}}
+["rustfs/rustfs@sha256:8cc9801755448b71a786705ce76692c77e14936cccd87cf2fc31842e58f4d1ff"]
+
+exit=0
+
+$ docker stats --no-stream --format {{.Name}} | {{.CPUPerc}} | {{.MemUsage}} frontend-hw8-rustfs
+frontend-hw8-rustfs | 24.36% | 779MiB / 31.27GiB
+
+exit=0
+
+$ C:\Users\Aidors\Documents\ChatGPT\temp\.venv\Scripts\python.exe -m pytest -q
+......................                                                   [100%]
+22 passed in 2.55s
+
+exit=0
+
+S3 integrity: {
+  "csv_download_sha256": "303db922b541e4440906f5a7e8be32fb55e8808f950ffddb8c272f1548212a65",
+  "csv_integrity_equal": true,
+  "json_objects_verified_by_size": 10000,
+  "json_download_sha256_samples": [
+    "raw/hh/100087922.json",
+    "raw/hh/106377240.json",
+    "raw/hh/106758999.json",
+    "raw/hh/90971550.json",
+    "raw/hh/93055254.json",
+    "raw/hh/99710345.json"
+  ],
+  "json_sample_integrity_equal": true,
+  "raw_json_count": 10000,
+  "total_objects_at_audit": 10079
+}
+
+BENCHMARK COMMAND OUTPUTS
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_csv --cap 0 --output <PROJECT>\output\runs\duck_csv_0_1.json
+duck_csv cap=all rows=229388 frontend=6057 totals=[30659, 121466, 399695] elapsed=10.726s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_csv --cap 0 --output <PROJECT>\output\runs\duck_csv_0_2.json
+duck_csv cap=all rows=229388 frontend=6057 totals=[30659, 121466, 399695] elapsed=10.825s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_csv --cap 0 --output <PROJECT>\output\runs\duck_csv_0_3.json
+duck_csv cap=all rows=229388 frontend=6057 totals=[30659, 121466, 399695] elapsed=10.422s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_csv --cap 10 --output <PROJECT>\output\runs\duck_csv_10_1.json
+duck_csv cap=10 rows=229388 frontend=6057 totals=[28140, 88388, 182809] elapsed=10.710s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_csv --cap 10 --output <PROJECT>\output\runs\duck_csv_10_2.json
+duck_csv cap=10 rows=229388 frontend=6057 totals=[28140, 88388, 182809] elapsed=11.016s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_csv --cap 10 --output <PROJECT>\output\runs\duck_csv_10_3.json
+duck_csv cap=10 rows=229388 frontend=6057 totals=[28140, 88388, 182809] elapsed=11.019s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_csv --cap 5 --output <PROJECT>\output\runs\duck_csv_5_1.json
+duck_csv cap=5 rows=229388 frontend=6057 totals=[20217, 36991, 34632] elapsed=10.201s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_csv --cap 5 --output <PROJECT>\output\runs\duck_csv_5_2.json
+duck_csv cap=5 rows=229388 frontend=6057 totals=[20217, 36991, 34632] elapsed=11.473s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_csv --cap 5 --output <PROJECT>\output\runs\duck_csv_5_3.json
+duck_csv cap=5 rows=229388 frontend=6057 totals=[20217, 36991, 34632] elapsed=10.920s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_parquet --cap 0 --output <PROJECT>\output\runs\duck_parquet_0_1.json
+duck_parquet cap=all rows=229388 frontend=6057 totals=[30659, 121466, 399695] elapsed=1.808s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_parquet --cap 0 --output <PROJECT>\output\runs\duck_parquet_0_2.json
+duck_parquet cap=all rows=229388 frontend=6057 totals=[30659, 121466, 399695] elapsed=1.604s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_parquet --cap 0 --output <PROJECT>\output\runs\duck_parquet_0_3.json
+duck_parquet cap=all rows=229388 frontend=6057 totals=[30659, 121466, 399695] elapsed=1.607s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_parquet --cap 10 --output <PROJECT>\output\runs\duck_parquet_10_1.json
+duck_parquet cap=10 rows=229388 frontend=6057 totals=[28140, 88388, 182809] elapsed=1.270s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_parquet --cap 10 --output <PROJECT>\output\runs\duck_parquet_10_2.json
+duck_parquet cap=10 rows=229388 frontend=6057 totals=[28140, 88388, 182809] elapsed=1.233s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_parquet --cap 10 --output <PROJECT>\output\runs\duck_parquet_10_3.json
+duck_parquet cap=10 rows=229388 frontend=6057 totals=[28140, 88388, 182809] elapsed=1.245s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_parquet --cap 5 --output <PROJECT>\output\runs\duck_parquet_5_1.json
+duck_parquet cap=5 rows=229388 frontend=6057 totals=[20217, 36991, 34632] elapsed=1.040s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_parquet --cap 5 --output <PROJECT>\output\runs\duck_parquet_5_2.json
+duck_parquet cap=5 rows=229388 frontend=6057 totals=[20217, 36991, 34632] elapsed=1.244s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method duck_parquet --cap 5 --output <PROJECT>\output\runs\duck_parquet_5_3.json
+duck_parquet cap=5 rows=229388 frontend=6057 totals=[20217, 36991, 34632] elapsed=1.124s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method mr --cap 0 --output <PROJECT>\output\runs\mr_0_1.json
+mr cap=all rows=229388 frontend=6057 totals=[30659, 121466, 399695] elapsed=11.021s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method mr --cap 0 --output <PROJECT>\output\runs\mr_0_2.json
+mr cap=all rows=229388 frontend=6057 totals=[30659, 121466, 399695] elapsed=11.649s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method mr --cap 0 --output <PROJECT>\output\runs\mr_0_3.json
+mr cap=all rows=229388 frontend=6057 totals=[30659, 121466, 399695] elapsed=10.404s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method mr --cap 10 --output <PROJECT>\output\runs\mr_10_1.json
+mr cap=10 rows=229388 frontend=6057 totals=[28140, 88388, 182809] elapsed=10.615s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method mr --cap 10 --output <PROJECT>\output\runs\mr_10_2.json
+mr cap=10 rows=229388 frontend=6057 totals=[28140, 88388, 182809] elapsed=11.379s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method mr --cap 10 --output <PROJECT>\output\runs\mr_10_3.json
+mr cap=10 rows=229388 frontend=6057 totals=[28140, 88388, 182809] elapsed=11.783s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method mr --cap 5 --output <PROJECT>\output\runs\mr_5_1.json
+mr cap=5 rows=229388 frontend=6057 totals=[20217, 36991, 34632] elapsed=11.109s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method mr --cap 5 --output <PROJECT>\output\runs\mr_5_2.json
+mr cap=5 rows=229388 frontend=6057 totals=[20217, 36991, 34632] elapsed=10.335s
+exit=0
+
+$ <PROJECT>\.venv\Scripts\python.exe -m frontend_lake --method mr --cap 5 --output <PROJECT>\output\runs\mr_5_3.json
+mr cap=5 rows=229388 frontend=6057 totals=[20217, 36991, 34632] elapsed=10.427s
+exit=0

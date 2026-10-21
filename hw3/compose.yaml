@@ -1,0 +1,19 @@
+name: frontend-hw8
+services:
+  rustfs:
+    image: rustfs/rustfs:1.0.0
+    container_name: frontend-hw8-rustfs
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:9010:9000"
+      - "127.0.0.1:9011:9001"
+    environment:
+      RUSTFS_ACCESS_KEY: ${S3_ACCESS_KEY:?Create .env using scripts/init_env.py}
+      RUSTFS_SECRET_KEY: ${S3_SECRET_KEY:?Create .env using scripts/init_env.py}
+      RUSTFS_VOLUMES: /data/vol{1...4}
+      RUSTFS_ADDRESS: ":9000"
+      RUSTFS_CONSOLE_ADDRESS: ":9001"
+      RUSTFS_CONSOLE_ENABLE: "true"
+      RUSTFS_UNSAFE_BYPASS_DISK_CHECK: "true"
+    volumes:
+      - ./storage:/data

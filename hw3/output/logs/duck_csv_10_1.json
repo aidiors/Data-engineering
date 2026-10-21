@@ -1,0 +1,16 @@
+{
+  "command": [
+    "<PROJECT>\\.venv\\Scripts\\python.exe",
+    "-m",
+    "frontend_lake",
+    "--method",
+    "duck_csv",
+    "--cap",
+    "10",
+    "--output",
+    "<PROJECT>\\output\\runs\\duck_csv_10_1.json"
+  ],
+  "stdout": "duck_csv cap=10 rows=229388 frontend=6057 totals=[28140, 88388, 182809] elapsed=10.710s\r\n",
+  "stderr": "",
+  "exit_code": 0
+}

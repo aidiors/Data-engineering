@@ -1,0 +1,16 @@
+{
+  "command": [
+    "<PROJECT>\\.venv\\Scripts\\python.exe",
+    "-m",
+    "frontend_lake",
+    "--method",
+    "duck_parquet",
+    "--cap",
+    "0",
+    "--output",
+    "<PROJECT>\\output\\runs\\duck_parquet_0_1.json"
+  ],
+  "stdout": "duck_parquet cap=all rows=229388 frontend=6057 totals=[30659, 121466, 399695] elapsed=1.808s\r\n",
+  "stderr": "",
+  "exit_code": 0
+}

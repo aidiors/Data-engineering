@@ -1,0 +1,22 @@
+{
+  "pages": 15,
+  "author": "Дубовик Никита",
+  "background": "#0A101D",
+  "rendered_background_rgb": [
+    10,
+    15,
+    28
+  ],
+  "fonts": {
+    "TimesNewRomanPSMT": 745,
+    "TimesNewRomanPS-BoldMT": 36,
+    "Consolas": 24
+  },
+  "long_dashes": 0,
+  "semicolons": 0,
+  "embedded_screenshots": 2,
+  "screenshots": [
+    "status.png",
+    "raw_csv.png"
+  ]
+}

@@ -1,0 +1,461 @@
+[
+  {
+    "method": "mr",
+    "cap": 5,
+    "repeat": 1,
+    "equal": true,
+    "sha256_counts": "405214db449792dc2dafb7fe8fb3295ddc9f2ce614efa85e0391cd3fb919a349",
+    "unique_combinations": [
+      932,
+      6040,
+      11203
+    ],
+    "sum_frequencies": [
+      20217,
+      36991,
+      34632
+    ]
+  },
+  {
+    "method": "duck_csv",
+    "cap": 5,
+    "repeat": 1,
+    "equal": true,
+    "sha256_counts": "405214db449792dc2dafb7fe8fb3295ddc9f2ce614efa85e0391cd3fb919a349",
+    "unique_combinations": [
+      932,
+      6040,
+      11203
+    ],
+    "sum_frequencies": [
+      20217,
+      36991,
+      34632
+    ]
+  },
+  {
+    "method": "duck_parquet",
+    "cap": 5,
+    "repeat": 1,
+    "equal": true,
+    "sha256_counts": "405214db449792dc2dafb7fe8fb3295ddc9f2ce614efa85e0391cd3fb919a349",
+    "unique_combinations": [
+      932,
+      6040,
+      11203
+    ],
+    "sum_frequencies": [
+      20217,
+      36991,
+      34632
+    ]
+  },
+  {
+    "method": "mr",
+    "cap": 10,
+    "repeat": 1,
+    "equal": true,
+    "sha256_counts": "a37a8675cdf2fb06f036e6f9620aabe896cede0515309c302997e10d4108ea0a",
+    "unique_combinations": [
+      1283,
+      14830,
+      62162
+    ],
+    "sum_frequencies": [
+      28140,
+      88388,
+      182809
+    ]
+  },
+  {
+    "method": "duck_csv",
+    "cap": 10,
+    "repeat": 1,
+    "equal": true,
+    "sha256_counts": "a37a8675cdf2fb06f036e6f9620aabe896cede0515309c302997e10d4108ea0a",
+    "unique_combinations": [
+      1283,
+      14830,
+      62162
+    ],
+    "sum_frequencies": [
+      28140,
+      88388,
+      182809
+    ]
+  },
+  {
+    "method": "duck_parquet",
+    "cap": 10,
+    "repeat": 1,
+    "equal": true,
+    "sha256_counts": "a37a8675cdf2fb06f036e6f9620aabe896cede0515309c302997e10d4108ea0a",
+    "unique_combinations": [
+      1283,
+      14830,
+      62162
+    ],
+    "sum_frequencies": [
+      28140,
+      88388,
+      182809
+    ]
+  },
+  {
+    "method": "mr",
+    "cap": 0,
+    "repeat": 1,
+    "equal": true,
+    "sha256_counts": "1a585886d96fba250d4c79d20ba4225f35da164aac210bc15d93c9a21d653f1c",
+    "unique_combinations": [
+      1470,
+      22963,
+      160010
+    ],
+    "sum_frequencies": [
+      30659,
+      121466,
+      399695
+    ]
+  },
+  {
+    "method": "duck_csv",
+    "cap": 0,
+    "repeat": 1,
+    "equal": true,
+    "sha256_counts": "1a585886d96fba250d4c79d20ba4225f35da164aac210bc15d93c9a21d653f1c",
+    "unique_combinations": [
+      1470,
+      22963,
+      160010
+    ],
+    "sum_frequencies": [
+      30659,
+      121466,
+      399695
+    ]
+  },
+  {
+    "method": "duck_parquet",
+    "cap": 0,
+    "repeat": 1,
+    "equal": true,
+    "sha256_counts": "1a585886d96fba250d4c79d20ba4225f35da164aac210bc15d93c9a21d653f1c",
+    "unique_combinations": [
+      1470,
+      22963,
+      160010
+    ],
+    "sum_frequencies": [
+      30659,
+      121466,
+      399695
+    ]
+  },
+  {
+    "method": "duck_csv",
+    "cap": 5,
+    "repeat": 2,
+    "equal": true,
+    "sha256_counts": "405214db449792dc2dafb7fe8fb3295ddc9f2ce614efa85e0391cd3fb919a349",
+    "unique_combinations": [
+      932,
+      6040,
+      11203
+    ],
+    "sum_frequencies": [
+      20217,
+      36991,
+      34632
+    ]
+  },
+  {
+    "method": "duck_parquet",
+    "cap": 5,
+    "repeat": 2,
+    "equal": true,
+    "sha256_counts": "405214db449792dc2dafb7fe8fb3295ddc9f2ce614efa85e0391cd3fb919a349",
+    "unique_combinations": [
+      932,
+      6040,
+      11203
+    ],
+    "sum_frequencies": [
+      20217,
+      36991,
+      34632
+    ]
+  },
+  {
+    "method": "mr",
+    "cap": 5,
+    "repeat": 2,
+    "equal": true,
+    "sha256_counts": "405214db449792dc2dafb7fe8fb3295ddc9f2ce614efa85e0391cd3fb919a349",
+    "unique_combinations": [
+      932,
+      6040,
+      11203
+    ],
+    "sum_frequencies": [
+      20217,
+      36991,
+      34632
+    ]
+  },
+  {
+    "method": "duck_csv",
+    "cap": 10,
+    "repeat": 2,
+    "equal": true,
+    "sha256_counts": "a37a8675cdf2fb06f036e6f9620aabe896cede0515309c302997e10d4108ea0a",
+    "unique_combinations": [
+      1283,
+      14830,
+      62162
+    ],
+    "sum_frequencies": [
+      28140,
+      88388,
+      182809
+    ]
+  },
+  {
+    "method": "duck_parquet",
+    "cap": 10,
+    "repeat": 2,
+    "equal": true,
+    "sha256_counts": "a37a8675cdf2fb06f036e6f9620aabe896cede0515309c302997e10d4108ea0a",
+    "unique_combinations": [
+      1283,
+      14830,
+      62162
+    ],
+    "sum_frequencies": [
+      28140,
+      88388,
+      182809
+    ]
+  },
+  {
+    "method": "mr",
+    "cap": 10,
+    "repeat": 2,
+    "equal": true,
+    "sha256_counts": "a37a8675cdf2fb06f036e6f9620aabe896cede0515309c302997e10d4108ea0a",
+    "unique_combinations": [
+      1283,
+      14830,
+      62162
+    ],
+    "sum_frequencies": [
+      28140,
+      88388,
+      182809
+    ]
+  },
+  {
+    "method": "duck_csv",
+    "cap": 0,
+    "repeat": 2,
+    "equal": true,
+    "sha256_counts": "1a585886d96fba250d4c79d20ba4225f35da164aac210bc15d93c9a21d653f1c",
+    "unique_combinations": [
+      1470,
+      22963,
+      160010
+    ],
+    "sum_frequencies": [
+      30659,
+      121466,
+      399695
+    ]
+  },
+  {
+    "method": "duck_parquet",
+    "cap": 0,
+    "repeat": 2,
+    "equal": true,
+    "sha256_counts": "1a585886d96fba250d4c79d20ba4225f35da164aac210bc15d93c9a21d653f1c",
+    "unique_combinations": [
+      1470,
+      22963,
+      160010
+    ],
+    "sum_frequencies": [
+      30659,
+      121466,
+      399695
+    ]
+  },
+  {
+    "method": "mr",
+    "cap": 0,
+    "repeat": 2,
+    "equal": true,
+    "sha256_counts": "1a585886d96fba250d4c79d20ba4225f35da164aac210bc15d93c9a21d653f1c",
+    "unique_combinations": [
+      1470,
+      22963,
+      160010
+    ],
+    "sum_frequencies": [
+      30659,
+      121466,
+      399695
+    ]
+  },
+  {
+    "method": "duck_parquet",
+    "cap": 5,
+    "repeat": 3,
+    "equal": true,
+    "sha256_counts": "405214db449792dc2dafb7fe8fb3295ddc9f2ce614efa85e0391cd3fb919a349",
+    "unique_combinations": [
+      932,
+      6040,
+      11203
+    ],
+    "sum_frequencies": [
+      20217,
+      36991,
+      34632
+    ]
+  },
+  {
+    "method": "mr",
+    "cap": 5,
+    "repeat": 3,
+    "equal": true,
+    "sha256_counts": "405214db449792dc2dafb7fe8fb3295ddc9f2ce614efa85e0391cd3fb919a349",
+    "unique_combinations": [
+      932,
+      6040,
+      11203
+    ],
+    "sum_frequencies": [
+      20217,
+      36991,
+      34632
+    ]
+  },
+  {
+    "method": "duck_csv",
+    "cap": 5,
+    "repeat": 3,
+    "equal": true,
+    "sha256_counts": "405214db449792dc2dafb7fe8fb3295ddc9f2ce614efa85e0391cd3fb919a349",
+    "unique_combinations": [
+      932,
+      6040,
+      11203
+    ],
+    "sum_frequencies": [
+      20217,
+      36991,
+      34632
+    ]
+  },
+  {
+    "method": "duck_parquet",
+    "cap": 10,
+    "repeat": 3,
+    "equal": true,
+    "sha256_counts": "a37a8675cdf2fb06f036e6f9620aabe896cede0515309c302997e10d4108ea0a",
+    "unique_combinations": [
+      1283,
+      14830,
+      62162
+    ],
+    "sum_frequencies": [
+      28140,
+      88388,
+      182809
+    ]
+  },
+  {
+    "method": "mr",
+    "cap": 10,
+    "repeat": 3,
+    "equal": true,
+    "sha256_counts": "a37a8675cdf2fb06f036e6f9620aabe896cede0515309c302997e10d4108ea0a",
+    "unique_combinations": [
+      1283,
+      14830,
+      62162
+    ],
+    "sum_frequencies": [
+      28140,
+      88388,
+      182809
+    ]
+  },
+  {
+    "method": "duck_csv",
+    "cap": 10,
+    "repeat": 3,
+    "equal": true,
+    "sha256_counts": "a37a8675cdf2fb06f036e6f9620aabe896cede0515309c302997e10d4108ea0a",
+    "unique_combinations": [
+      1283,
+      14830,
+      62162
+    ],
+    "sum_frequencies": [
+      28140,
+      88388,
+      182809
+    ]
+  },
+  {
+    "method": "duck_parquet",
+    "cap": 0,
+    "repeat": 3,
+    "equal": true,
+    "sha256_counts": "1a585886d96fba250d4c79d20ba4225f35da164aac210bc15d93c9a21d653f1c",
+    "unique_combinations": [
+      1470,
+      22963,
+      160010
+    ],
+    "sum_frequencies": [
+      30659,
+      121466,
+      399695
+    ]
+  },
+  {
+    "method": "mr",
+    "cap": 0,
+    "repeat": 3,
+    "equal": true,
+    "sha256_counts": "1a585886d96fba250d4c79d20ba4225f35da164aac210bc15d93c9a21d653f1c",
+    "unique_combinations": [
+      1470,
+      22963,
+      160010
+    ],
+    "sum_frequencies": [
+      30659,
+      121466,
+      399695
+    ]
+  },
+  {
+    "method": "duck_csv",
+    "cap": 0,
+    "repeat": 3,
+    "equal": true,
+    "sha256_counts": "1a585886d96fba250d4c79d20ba4225f35da164aac210bc15d93c9a21d653f1c",
+    "unique_combinations": [
+      1470,
+      22963,
+      160010
+    ],
+    "sum_frequencies": [
+      30659,
+      121466,
+      399695
+    ]
+  }
+]

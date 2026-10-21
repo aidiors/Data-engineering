@@ -1,0 +1,18 @@
+{
+  "variant": 8,
+  "role": "Программист, разработчик",
+  "title_regex": "(^|[^a-zа-яё])(front[ -]*end|фронт[ -]*[еэ]нд)([^a-zа-яё]|$)",
+  "stack_sizes": [5, 10, 0],
+  "chunk_rows": 1000,
+  "read_buffer_bytes": 1048576,
+  "repeats": 3,
+  "duckdb_threads": 4,
+  "duckdb_memory_limit": "2GB",
+  "salary_min_support": 20,
+  "salary_min_complement": 20,
+  "regions": ["Москва", "Санкт-Петербург", "Екатеринбург"],
+  "bucket": "hh-lake",
+  "raw_key": "raw/it_vacancies_2024.csv",
+  "parquet_key": "prepared/vacancies.parquet",
+  "endpoint": "http://127.0.0.1:9010"
+}

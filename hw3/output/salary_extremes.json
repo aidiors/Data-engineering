@@ -1,0 +1,542 @@
+{
+  "1_higher": [
+    {
+      "k": 1,
+      "skills": "rxjs",
+      "support_paid": 29,
+      "support_without": 1822,
+      "median_with": 230000.0,
+      "median_without": 135000.0,
+      "delta_rub": 95000.0,
+      "delta_pct": 70.37037037037037,
+      "delta_vs_overall_rub": 90000.0
+    },
+    {
+      "k": 1,
+      "skills": "mobx",
+      "support_paid": 34,
+      "support_without": 1817,
+      "median_with": 200000.0,
+      "median_without": 135000.0,
+      "delta_rub": 65000.0,
+      "delta_pct": 48.14814814814814,
+      "delta_vs_overall_rub": 60000.0
+    },
+    {
+      "k": 1,
+      "skills": "websocket",
+      "support_paid": 26,
+      "support_without": 1825,
+      "median_with": 200000.0,
+      "median_without": 135000.0,
+      "delta_rub": 65000.0,
+      "delta_pct": 48.14814814814814,
+      "delta_vs_overall_rub": 60000.0
+    },
+    {
+      "k": 1,
+      "skills": "atlassian jira",
+      "support_paid": 21,
+      "support_without": 1830,
+      "median_with": 200000.0,
+      "median_without": 135000.0,
+      "delta_rub": 65000.0,
+      "delta_pct": 48.14814814814814,
+      "delta_vs_overall_rub": 60000.0
+    },
+    {
+      "k": 1,
+      "skills": "разработка по",
+      "support_paid": 25,
+      "support_without": 1826,
+      "median_with": 200000.0,
+      "median_without": 140000.0,
+      "delta_rub": 60000.0,
+      "delta_pct": 42.85714285714286,
+      "delta_vs_overall_rub": 60000.0
+    },
+    {
+      "k": 1,
+      "skills": "ngrx",
+      "support_paid": 20,
+      "support_without": 1831,
+      "median_with": 195000.0,
+      "median_without": 135000.0,
+      "delta_rub": 60000.0,
+      "delta_pct": 44.44444444444444,
+      "delta_vs_overall_rub": 55000.0
+    },
+    {
+      "k": 1,
+      "skills": "typescript",
+      "support_paid": 725,
+      "support_without": 1126,
+      "median_with": 155000.0,
+      "median_without": 120000.0,
+      "delta_rub": 35000.0,
+      "delta_pct": 29.166666666666675,
+      "delta_vs_overall_rub": 15000.0
+    },
+    {
+      "k": 1,
+      "skills": "ssr",
+      "support_paid": 22,
+      "support_without": 1829,
+      "median_with": 175000.0,
+      "median_without": 140000.0,
+      "delta_rub": 35000.0,
+      "delta_pct": 25.0,
+      "delta_vs_overall_rub": 35000.0
+    }
+  ],
+  "1_lower": [
+    {
+      "k": 1,
+      "skills": "jquery",
+      "support_paid": 112,
+      "support_without": 1739,
+      "median_with": 80000.0,
+      "median_without": 140000.0,
+      "delta_rub": -60000.0,
+      "delta_pct": -42.85714285714286,
+      "delta_vs_overall_rub": -60000.0
+    },
+    {
+      "k": 1,
+      "skills": "ajax",
+      "support_paid": 55,
+      "support_without": 1796,
+      "median_with": 80000.0,
+      "median_without": 140000.0,
+      "delta_rub": -60000.0,
+      "delta_pct": -42.85714285714286,
+      "delta_vs_overall_rub": -60000.0
+    },
+    {
+      "k": 1,
+      "skills": "1с-битрикс",
+      "support_paid": 23,
+      "support_without": 1828,
+      "median_with": 80000.0,
+      "median_without": 140000.0,
+      "delta_rub": -60000.0,
+      "delta_pct": -42.85714285714286,
+      "delta_vs_overall_rub": -60000.0
+    },
+    {
+      "k": 1,
+      "skills": "php",
+      "support_paid": 88,
+      "support_without": 1763,
+      "median_with": 87500.0,
+      "median_without": 140000.0,
+      "delta_rub": -52500.0,
+      "delta_pct": -37.5,
+      "delta_vs_overall_rub": -52500.0
+    },
+    {
+      "k": 1,
+      "skills": "кроссбраузерная верстка",
+      "support_paid": 106,
+      "support_without": 1745,
+      "median_with": 90000.0,
+      "median_without": 140000.0,
+      "delta_rub": -50000.0,
+      "delta_pct": -35.71428571428571,
+      "delta_vs_overall_rub": -50000.0
+    },
+    {
+      "k": 1,
+      "skills": "верстка",
+      "support_paid": 24,
+      "support_without": 1827,
+      "median_with": 90000.0,
+      "median_without": 140000.0,
+      "delta_rub": -50000.0,
+      "delta_pct": -35.71428571428571,
+      "delta_vs_overall_rub": -50000.0
+    },
+    {
+      "k": 1,
+      "skills": "html",
+      "support_paid": 532,
+      "support_without": 1319,
+      "median_with": 105000.0,
+      "median_without": 150000.0,
+      "delta_rub": -45000.0,
+      "delta_pct": -30.000000000000004,
+      "delta_vs_overall_rub": -35000.0
+    },
+    {
+      "k": 1,
+      "skills": "css",
+      "support_paid": 480,
+      "support_without": 1371,
+      "median_with": 105000.0,
+      "median_without": 150000.0,
+      "delta_rub": -45000.0,
+      "delta_pct": -30.000000000000004,
+      "delta_vs_overall_rub": -35000.0
+    }
+  ],
+  "2_higher": [
+    {
+      "k": 2,
+      "skills": "rxjs + typescript",
+      "support_paid": 26,
+      "support_without": 1825,
+      "median_with": 230000.0,
+      "median_without": 135000.0,
+      "delta_rub": 95000.0,
+      "delta_pct": 70.37037037037037,
+      "delta_vs_overall_rub": 90000.0
+    },
+    {
+      "k": 2,
+      "skills": "frontend + react.js",
+      "support_paid": 30,
+      "support_without": 1821,
+      "median_with": 221250.0,
+      "median_without": 135000.0,
+      "delta_rub": 86250.0,
+      "delta_pct": 63.888888888888886,
+      "delta_vs_overall_rub": 81250.0
+    },
+    {
+      "k": 2,
+      "skills": "react.js + typescript",
+      "support_paid": 66,
+      "support_without": 1785,
+      "median_with": 202500.0,
+      "median_without": 135000.0,
+      "delta_rub": 67500.0,
+      "delta_pct": 50.0,
+      "delta_vs_overall_rub": 62500.0
+    },
+    {
+      "k": 2,
+      "skills": "css + разработка по",
+      "support_paid": 21,
+      "support_without": 1830,
+      "median_with": 205000.0,
+      "median_without": 138750.0,
+      "delta_rub": 66250.0,
+      "delta_pct": 47.74774774774775,
+      "delta_vs_overall_rub": 65000.0
+    },
+    {
+      "k": 2,
+      "skills": "angular + javascript",
+      "support_paid": 80,
+      "support_without": 1771,
+      "median_with": 200000.0,
+      "median_without": 135000.0,
+      "delta_rub": 65000.0,
+      "delta_pct": 48.14814814814814,
+      "delta_vs_overall_rub": 60000.0
+    },
+    {
+      "k": 2,
+      "skills": "reactjs + typescript",
+      "support_paid": 43,
+      "support_without": 1808,
+      "median_with": 200000.0,
+      "median_without": 135000.0,
+      "delta_rub": 65000.0,
+      "delta_pct": 48.14814814814814,
+      "delta_vs_overall_rub": 60000.0
+    },
+    {
+      "k": 2,
+      "skills": "frontend + reactjs",
+      "support_paid": 31,
+      "support_without": 1820,
+      "median_with": 200000.0,
+      "median_without": 135000.0,
+      "delta_rub": 65000.0,
+      "delta_pct": 48.14814814814814,
+      "delta_vs_overall_rub": 60000.0
+    },
+    {
+      "k": 2,
+      "skills": "mobx + typescript",
+      "support_paid": 29,
+      "support_without": 1822,
+      "median_with": 200000.0,
+      "median_without": 135000.0,
+      "delta_rub": 65000.0,
+      "delta_pct": 48.14814814814814,
+      "delta_vs_overall_rub": 60000.0
+    }
+  ],
+  "2_lower": [
+    {
+      "k": 2,
+      "skills": "javascript + веб-программирование",
+      "support_paid": 28,
+      "support_without": 1823,
+      "median_with": 67500.0,
+      "median_without": 140000.0,
+      "delta_rub": -72500.0,
+      "delta_pct": -51.78571428571428,
+      "delta_vs_overall_rub": -72500.0
+    },
+    {
+      "k": 2,
+      "skills": "ajax + html",
+      "support_paid": 34,
+      "support_without": 1817,
+      "median_with": 70000.0,
+      "median_without": 140000.0,
+      "delta_rub": -70000.0,
+      "delta_pct": -50.0,
+      "delta_vs_overall_rub": -70000.0
+    },
+    {
+      "k": 2,
+      "skills": "jquery + кроссбраузерная верстка",
+      "support_paid": 25,
+      "support_without": 1826,
+      "median_with": 70000.0,
+      "median_without": 140000.0,
+      "delta_rub": -70000.0,
+      "delta_pct": -50.0,
+      "delta_vs_overall_rub": -70000.0
+    },
+    {
+      "k": 2,
+      "skills": "bootstrap + кроссбраузерная верстка",
+      "support_paid": 21,
+      "support_without": 1830,
+      "median_with": 70000.0,
+      "median_without": 140000.0,
+      "delta_rub": -70000.0,
+      "delta_pct": -50.0,
+      "delta_vs_overall_rub": -70000.0
+    },
+    {
+      "k": 2,
+      "skills": "css + jquery",
+      "support_paid": 52,
+      "support_without": 1799,
+      "median_with": 75000.0,
+      "median_without": 140000.0,
+      "delta_rub": -65000.0,
+      "delta_pct": -46.42857142857143,
+      "delta_vs_overall_rub": -65000.0
+    },
+    {
+      "k": 2,
+      "skills": "html + php",
+      "support_paid": 45,
+      "support_without": 1806,
+      "median_with": 75000.0,
+      "median_without": 140000.0,
+      "delta_rub": -65000.0,
+      "delta_pct": -46.42857142857143,
+      "delta_vs_overall_rub": -65000.0
+    },
+    {
+      "k": 2,
+      "skills": "css3 + php",
+      "support_paid": 40,
+      "support_without": 1811,
+      "median_with": 75000.0,
+      "median_without": 140000.0,
+      "delta_rub": -65000.0,
+      "delta_pct": -46.42857142857143,
+      "delta_vs_overall_rub": -65000.0
+    },
+    {
+      "k": 2,
+      "skills": "jquery + php",
+      "support_paid": 31,
+      "support_without": 1820,
+      "median_with": 75000.0,
+      "median_without": 140000.0,
+      "delta_rub": -65000.0,
+      "delta_pct": -46.42857142857143,
+      "delta_vs_overall_rub": -65000.0
+    }
+  ],
+  "3_higher": [
+    {
+      "k": 3,
+      "skills": "react + react.js + typescript",
+      "support_paid": 29,
+      "support_without": 1822,
+      "median_with": 250000.0,
+      "median_without": 135000.0,
+      "delta_rub": 115000.0,
+      "delta_pct": 85.18518518518519,
+      "delta_vs_overall_rub": 110000.0
+    },
+    {
+      "k": 3,
+      "skills": "frontend + react + react.js",
+      "support_paid": 26,
+      "support_without": 1825,
+      "median_with": 250000.0,
+      "median_without": 135000.0,
+      "delta_rub": 115000.0,
+      "delta_pct": 85.18518518518519,
+      "delta_vs_overall_rub": 110000.0
+    },
+    {
+      "k": 3,
+      "skills": "frontend + react.js + typescript",
+      "support_paid": 24,
+      "support_without": 1827,
+      "median_with": 250000.0,
+      "median_without": 135000.0,
+      "delta_rub": 115000.0,
+      "delta_pct": 85.18518518518519,
+      "delta_vs_overall_rub": 110000.0
+    },
+    {
+      "k": 3,
+      "skills": "react + reactjs + typescript",
+      "support_paid": 24,
+      "support_without": 1827,
+      "median_with": 250000.0,
+      "median_without": 135000.0,
+      "delta_rub": 115000.0,
+      "delta_pct": 85.18518518518519,
+      "delta_vs_overall_rub": 110000.0
+    },
+    {
+      "k": 3,
+      "skills": "frontend + reactjs + typescript",
+      "support_paid": 20,
+      "support_without": 1831,
+      "median_with": 250000.0,
+      "median_without": 135000.0,
+      "delta_rub": 115000.0,
+      "delta_pct": 85.18518518518519,
+      "delta_vs_overall_rub": 110000.0
+    },
+    {
+      "k": 3,
+      "skills": "frontend + react + reactjs",
+      "support_paid": 23,
+      "support_without": 1828,
+      "median_with": 250000.0,
+      "median_without": 136250.0,
+      "delta_rub": 113750.0,
+      "delta_pct": 83.48623853211011,
+      "delta_vs_overall_rub": 110000.0
+    },
+    {
+      "k": 3,
+      "skills": "frontend + javascript + react.js",
+      "support_paid": 29,
+      "support_without": 1822,
+      "median_with": 230000.0,
+      "median_without": 135000.0,
+      "delta_rub": 95000.0,
+      "delta_pct": 70.37037037037037,
+      "delta_vs_overall_rub": 90000.0
+    },
+    {
+      "k": 3,
+      "skills": "javascript + react + react.js",
+      "support_paid": 40,
+      "support_without": 1811,
+      "median_with": 210000.0,
+      "median_without": 135000.0,
+      "delta_rub": 75000.0,
+      "delta_pct": 55.55555555555556,
+      "delta_vs_overall_rub": 70000.0
+    }
+  ],
+  "3_lower": [
+    {
+      "k": 3,
+      "skills": "ajax + css + html",
+      "support_paid": 22,
+      "support_without": 1829,
+      "median_with": 65000.0,
+      "median_without": 140000.0,
+      "delta_rub": -75000.0,
+      "delta_pct": -53.57142857142857,
+      "delta_vs_overall_rub": -75000.0
+    },
+    {
+      "k": 3,
+      "skills": "html + javascript + php",
+      "support_paid": 38,
+      "support_without": 1813,
+      "median_with": 70000.0,
+      "median_without": 140000.0,
+      "delta_rub": -70000.0,
+      "delta_pct": -50.0,
+      "delta_vs_overall_rub": -70000.0
+    },
+    {
+      "k": 3,
+      "skills": "css3 + html + кроссбраузерная верстка",
+      "support_paid": 37,
+      "support_without": 1814,
+      "median_with": 70000.0,
+      "median_without": 140000.0,
+      "delta_rub": -70000.0,
+      "delta_pct": -50.0,
+      "delta_vs_overall_rub": -70000.0
+    },
+    {
+      "k": 3,
+      "skills": "css3 + javascript + php",
+      "support_paid": 33,
+      "support_without": 1818,
+      "median_with": 70000.0,
+      "median_without": 140000.0,
+      "delta_rub": -70000.0,
+      "delta_pct": -50.0,
+      "delta_vs_overall_rub": -70000.0
+    },
+    {
+      "k": 3,
+      "skills": "ajax + html + javascript",
+      "support_paid": 31,
+      "support_without": 1820,
+      "median_with": 70000.0,
+      "median_without": 140000.0,
+      "delta_rub": -70000.0,
+      "delta_pct": -50.0,
+      "delta_vs_overall_rub": -70000.0
+    },
+    {
+      "k": 3,
+      "skills": "css + html + php",
+      "support_paid": 28,
+      "support_without": 1823,
+      "median_with": 70000.0,
+      "median_without": 140000.0,
+      "delta_rub": -70000.0,
+      "delta_pct": -50.0,
+      "delta_vs_overall_rub": -70000.0
+    },
+    {
+      "k": 3,
+      "skills": "css + css3 + jquery",
+      "support_paid": 25,
+      "support_without": 1826,
+      "median_with": 70000.0,
+      "median_without": 140000.0,
+      "delta_rub": -70000.0,
+      "delta_pct": -50.0,
+      "delta_vs_overall_rub": -70000.0
+    },
+    {
+      "k": 3,
+      "skills": "css3 + html + php",
+      "support_paid": 23,
+      "support_without": 1828,
+      "median_with": 70000.0,
+      "median_without": 140000.0,
+      "delta_rub": -70000.0,
+      "delta_pct": -50.0,
+      "delta_vs_overall_rub": -70000.0
+    }
+  ]
+}

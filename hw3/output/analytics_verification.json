@@ -1,0 +1,343 @@
+{
+  "regions_equal": true,
+  "skill_demand_equal": true,
+  "salary_extremes_checked": [
+    {
+      "skills": [
+        "rxjs"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "mobx"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "websocket"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "atlassian jira"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "разработка по"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "ngrx"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "typescript"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "ssr"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "jquery"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "ajax"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "1с-битрикс"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "php"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "кроссбраузерная верстка"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "верстка"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "html"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "css"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "rxjs",
+        "typescript"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "frontend",
+        "react.js"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "react.js",
+        "typescript"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "css",
+        "разработка по"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "angular",
+        "javascript"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "reactjs",
+        "typescript"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "frontend",
+        "reactjs"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "mobx",
+        "typescript"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "javascript",
+        "веб-программирование"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "ajax",
+        "html"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "jquery",
+        "кроссбраузерная верстка"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "bootstrap",
+        "кроссбраузерная верстка"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "css",
+        "jquery"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "html",
+        "php"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "css3",
+        "php"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "jquery",
+        "php"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "react",
+        "react.js",
+        "typescript"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "frontend",
+        "react",
+        "react.js"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "frontend",
+        "react.js",
+        "typescript"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "react",
+        "reactjs",
+        "typescript"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "frontend",
+        "reactjs",
+        "typescript"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "frontend",
+        "react",
+        "reactjs"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "frontend",
+        "javascript",
+        "react.js"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "javascript",
+        "react",
+        "react.js"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "ajax",
+        "css",
+        "html"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "html",
+        "javascript",
+        "php"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "css3",
+        "html",
+        "кроссбраузерная верстка"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "css3",
+        "javascript",
+        "php"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "ajax",
+        "html",
+        "javascript"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "css",
+        "html",
+        "php"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "css",
+        "css3",
+        "jquery"
+      ],
+      "equal": true
+    },
+    {
+      "skills": [
+        "css3",
+        "html",
+        "php"
+      ],
+      "equal": true
+    }
+  ],
+  "salary_overall_equal": true
+}

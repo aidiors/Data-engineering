@@ -1,0 +1,22 @@
+[
+  {
+    "key": "results/variant8/counts/mr_10.json",
+    "sha256": "ec394a0df2592e3a341cd255a830eb39a8f5b98576e269cdf03b9198a8117fa8",
+    "equal": true
+  },
+  {
+    "key": "results/variant8/counts/mr_5.json",
+    "sha256": "9c71ec82ace2d41e6855d41d6c4bcbe7c2fd97cb9d51c46ca34dbbacff4f64e8",
+    "equal": true
+  },
+  {
+    "key": "results/variant8/counts/mr_all.json",
+    "sha256": "4306bd227523bd31fca9cf191182dfeb0e42351e3a63ac5eb246ab83362fbec4",
+    "equal": true
+  },
+  {
+    "key": "results/variant8/pdf/Dubovik_Nikita_variant8_hw3.pdf",
+    "sha256": "cf1232dbb5b372ec5170fe51079b177e5d59746f8e4904e5bb6ecc71a7ddd5eb",
+    "equal": true
+  }
+]

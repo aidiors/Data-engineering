@@ -1,0 +1,41 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "logical_cpus": 16,
+  "ram_gib": 63.856746673583984,
+  "config": {
+    "variant": 8,
+    "role": "Программист, разработчик",
+    "title_regex": "(^|[^a-zа-яё])(front[ -]*end|фронт[ -]*[еэ]нд)([^a-zа-яё]|$)",
+    "stack_sizes": [
+      5,
+      10,
+      0
+    ],
+    "chunk_rows": 1000,
+    "read_buffer_bytes": 1048576,
+    "repeats": 3,
+    "duckdb_threads": 4,
+    "duckdb_memory_limit": "2GB",
+    "salary_min_support": 20,
+    "salary_min_complement": 20,
+    "regions": [
+      "Москва",
+      "Санкт-Петербург",
+      "Екатеринбург"
+    ],
+    "bucket": "hh-lake",
+    "raw_key": "raw/it_vacancies_2024.csv",
+    "parquet_key": "prepared/vacancies.parquet",
+    "endpoint": "http://127.0.0.1:9010"
+  },
+  "versions": {
+    "duckdb": "1.5.6",
+    "boto3": "1.43.115",
+    "psutil": "7.2.2"
+  },
+  "docker_version": "29.8.0",
+  "rustfs_image": "[\"rustfs/rustfs@sha256:8cc9801755448b71a786705ce76692c77e14936cccd87cf2fc31842e58f4d1ff\"]",
+  "memory_definition": "Maximum sum of per-process OS peak working sets, sampled every 10 ms. A conservative upper bound for the process tree, excluding RustFS.",
+  "cache_policy": "OS and S3 caches are not flushed. Fresh client processes, rotated methods."
+}

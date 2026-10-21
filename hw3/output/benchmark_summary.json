@@ -1,0 +1,92 @@
+[
+  {
+    "method": "mr",
+    "cap": 5,
+    "n": 3,
+    "median_wall_seconds": 10.705968800000846,
+    "min_wall_seconds": 10.63420450000558,
+    "max_wall_seconds": 11.388578400015831,
+    "median_peak_rss_mib": 93.7421875,
+    "max_peak_rss_mib": 94.4453125
+  },
+  {
+    "method": "duck_csv",
+    "cap": 5,
+    "n": 3,
+    "median_wall_seconds": 11.165648600028362,
+    "min_wall_seconds": 10.441663299978245,
+    "max_wall_seconds": 11.72829559998354,
+    "median_peak_rss_mib": 1156.390625,
+    "max_peak_rss_mib": 1156.42578125
+  },
+  {
+    "method": "duck_parquet",
+    "cap": 5,
+    "n": 3,
+    "median_wall_seconds": 1.4333474999875762,
+    "min_wall_seconds": 1.3237805999815464,
+    "max_wall_seconds": 1.5247046999866143,
+    "median_peak_rss_mib": 183.6875,
+    "max_peak_rss_mib": 184.08984375
+  },
+  {
+    "method": "mr",
+    "cap": 10,
+    "n": 3,
+    "median_wall_seconds": 12.040590999997221,
+    "min_wall_seconds": 11.27385920000961,
+    "max_wall_seconds": 12.455826299963519,
+    "median_peak_rss_mib": 167.99609375,
+    "max_peak_rss_mib": 174.3984375
+  },
+  {
+    "method": "duck_csv",
+    "cap": 10,
+    "n": 3,
+    "median_wall_seconds": 11.612133699993137,
+    "min_wall_seconds": 11.300034300016705,
+    "max_wall_seconds": 11.631451099994592,
+    "median_peak_rss_mib": 1156.2734375,
+    "max_peak_rss_mib": 1156.35546875
+  },
+  {
+    "method": "duck_parquet",
+    "cap": 10,
+    "n": 3,
+    "median_wall_seconds": 1.8650353000266477,
+    "min_wall_seconds": 1.839050300011877,
+    "max_wall_seconds": 1.900328800023999,
+    "median_peak_rss_mib": 200.60546875,
+    "max_peak_rss_mib": 201.09375
+  },
+  {
+    "method": "mr",
+    "cap": 0,
+    "n": 3,
+    "median_wall_seconds": 12.32724249997409,
+    "min_wall_seconds": 11.652828600024804,
+    "max_wall_seconds": 13.334053200029302,
+    "median_peak_rss_mib": 318.4296875,
+    "max_peak_rss_mib": 320.21875
+  },
+  {
+    "method": "duck_csv",
+    "cap": 0,
+    "n": 3,
+    "median_wall_seconds": 11.946447700029239,
+    "min_wall_seconds": 11.685291500005405,
+    "max_wall_seconds": 12.160375199979171,
+    "median_peak_rss_mib": 1156.23046875,
+    "max_peak_rss_mib": 1156.43359375
+  },
+  {
+    "method": "duck_parquet",
+    "cap": 0,
+    "n": 3,
+    "median_wall_seconds": 2.8300497999880463,
+    "min_wall_seconds": 2.7874017999856733,
+    "max_wall_seconds": 3.109169800009113,
+    "median_peak_rss_mib": 354.28515625,
+    "max_peak_rss_mib": 354.8828125
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "<PROJECT>\\.venv\\Scripts\\python.exe",
+    "-m",
+    "frontend_lake",
+    "--method",
+    "mr",
+    "--cap",
+    "10",
+    "--output",
+    "<PROJECT>\\output\\runs\\mr_10_3.json"
+  ],
+  "stdout": "mr cap=10 rows=229388 frontend=6057 totals=[28140, 88388, 182809] elapsed=11.783s\r\n",
+  "stderr": "",
+  "exit_code": 0
+}
