@@ -1,0 +1,2 @@
+$ sudo k3s kubectl create -f /opt/hw5/project/hw5/manifests/62-quota-rejected.yaml
+Error from server (Forbidden): error when creating "/opt/hw5/project/hw5/manifests/62-quota-rejected.yaml": pods "quota-rejected" is forbidden: exceeded quota: student-quota, requested: requests.cpu=300m, used: requests.cpu=400m, limited: requests.cpu=500m

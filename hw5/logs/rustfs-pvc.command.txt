@@ -1,0 +1,55 @@
+$ sudo k3s kubectl -n hw5 get pvc rustfs-data -o json
+{
+    "apiVersion": "v1",
+    "kind": "PersistentVolumeClaim",
+    "metadata": {
+        "annotations": {
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"PersistentVolumeClaim\",\"metadata\":{\"annotations\":{},\"name\":\"rustfs-data\",\"namespace\":\"hw5\"},\"spec\":{\"accessModes\":[\"ReadWriteOnce\"],\"resources\":{\"requests\":{\"storage\":\"10Gi\"}},\"storageClassName\":\"local-path\"}}\n",
+            "pv.kubernetes.io/bind-completed": "yes",
+            "pv.kubernetes.io/bound-by-controller": "yes",
+            "volume.beta.kubernetes.io/storage-provisioner": "rancher.io/local-path",
+            "volume.kubernetes.io/selected-node": "hw5-node",
+            "volume.kubernetes.io/storage-provisioner": "rancher.io/local-path"
+        },
+        "creationTimestamp": "2026-11-05T14:50:45Z",
+        "finalizers": [
+            "kubernetes.io/pvc-protection"
+        ],
+        "name": "rustfs-data",
+        "namespace": "hw5",
+        "resourceVersion": "1044",
+        "uid": "2660a2ea-9d11-4f52-a445-adfce893ec96"
+    },
+    "spec": {
+        "accessModes": [
+            "ReadWriteOnce"
+        ],
+        "resources": {
+            "requests": {
+                "storage": "10Gi"
+            }
+        },
+        "storageClassName": "local-path",
+        "volumeMode": "Filesystem",
+        "volumeName": "pvc-2660a2ea-9d11-4f52-a445-adfce893ec96"
+    },
+    "status": {
+        "accessModes": [
+            "ReadWriteOnce"
+        ],
+        "capacity": {
+            "storage": "10Gi"
+        },
+        "conditions": [
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-11-05T14:51:14Z",
+                "message": "A pod is currently referencing this PVC",
+                "reason": "PodUsingPVC",
+                "status": "False",
+                "type": "Unused"
+            }
+        ],
+        "phase": "Bound"
+    }
+}

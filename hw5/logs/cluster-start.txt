@@ -1,0 +1,4 @@
+$ sudo systemctl is-active k3s; sudo k3s kubectl get nodes -o wide
+active
+NAME       STATUS   ROLES           AGE   VERSION        INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                       KERNEL-VERSION                         CONTAINER-RUNTIME
+hw5-node   Ready    control-plane   44s   v1.37.2+k3s1   10.0.2.15     <none>        Debian GNU/Linux 13 (trixie)   6.12.115+deb13.1-cloud-amd64 (amd64)   docker://26.1.5+dfsg1

@@ -1,0 +1,225 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"name\":\"high-priority\",\"namespace\":\"hw5\"},\"spec\":{\"containers\":[{\"args\":[\"hold\",\"--seconds\",\"900\"],\"image\":\"hw5-skills:1\",\"imagePullPolicy\":\"Never\",\"name\":\"task\",\"resources\":{\"limits\":{\"cpu\":\"1500m\",\"memory\":\"128Mi\"},\"requests\":{\"cpu\":\"1100m\",\"memory\":\"64Mi\"}}}],\"priorityClassName\":\"hw5-high\",\"restartPolicy\":\"Never\",\"terminationGracePeriodSeconds\":1}}\n"
+    },
+    "creationTimestamp": "2026-11-05T15:01:44Z",
+    "generation": 1,
+    "name": "high-priority",
+    "namespace": "hw5",
+    "resourceVersion": "1497",
+    "uid": "11d20897-faef-4cbf-a3bf-8e9c28f6319b"
+  },
+  "spec": {
+    "containers": [
+      {
+        "args": [
+          "hold",
+          "--seconds",
+          "900"
+        ],
+        "image": "hw5-skills:1",
+        "imagePullPolicy": "Never",
+        "name": "task",
+        "resources": {
+          "limits": {
+            "cpu": "1500m",
+            "memory": "128Mi"
+          },
+          "requests": {
+            "cpu": "1100m",
+            "memory": "64Mi"
+          }
+        },
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "volumeMounts": [
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-r4r9v",
+            "readOnly": true
+          }
+        ]
+      }
+    ],
+    "dnsPolicy": "ClusterFirst",
+    "enableServiceLinks": true,
+    "nodeName": "hw5-node",
+    "preemptionPolicy": "PreemptLowerPriority",
+    "priority": 1000,
+    "priorityClassName": "hw5-high",
+    "restartPolicy": "Never",
+    "schedulerName": "default-scheduler",
+    "securityContext": {},
+    "serviceAccount": "default",
+    "serviceAccountName": "default",
+    "terminationGracePeriodSeconds": 1,
+    "tolerations": [
+      {
+        "effect": "NoExecute",
+        "key": "node.kubernetes.io/not-ready",
+        "operator": "Exists",
+        "tolerationSeconds": 300
+      },
+      {
+        "effect": "NoExecute",
+        "key": "node.kubernetes.io/unreachable",
+        "operator": "Exists",
+        "tolerationSeconds": 300
+      }
+    ],
+    "volumes": [
+      {
+        "name": "kube-api-access-r4r9v",
+        "projected": {
+          "defaultMode": 420,
+          "sources": [
+            {
+              "serviceAccountToken": {
+                "expirationSeconds": 3607,
+                "path": "token"
+              }
+            },
+            {
+              "configMap": {
+                "items": [
+                  {
+                    "key": "ca.crt",
+                    "path": "ca.crt"
+                  }
+                ],
+                "name": "kube-root-ca.crt"
+              }
+            },
+            {
+              "downwardAPI": {
+                "items": [
+                  {
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "metadata.namespace"
+                    },
+                    "path": "namespace"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "status": {
+    "allocatedResources": {
+      "cpu": "1100m",
+      "memory": "64Mi"
+    },
+    "conditions": [
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-05T15:02:14Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "PodReadyToStartContainers"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-05T15:01:57Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "Initialized"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-05T15:02:21Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "Ready"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-05T15:02:21Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "ContainersReady"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-05T15:01:57Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "PodScheduled"
+      }
+    ],
+    "containerStatuses": [
+      {
+        "allocatedResources": {
+          "cpu": "1100m",
+          "memory": "64Mi"
+        },
+        "containerID": "docker://647b6a1a39358f0568573e1c3cf54119684226fc6d0a8b75ae83e956d719aa8f",
+        "image": "hw5-skills:1",
+        "imageID": "docker://sha256:97e2681895e81a1993a4e6c8aec7092254569c8372d267c4c46388e96a7edbea",
+        "lastState": {},
+        "name": "task",
+        "ready": true,
+        "resources": {
+          "limits": {
+            "cpu": "1500m",
+            "memory": "128Mi"
+          },
+          "requests": {
+            "cpu": "1100m",
+            "memory": "64Mi"
+          }
+        },
+        "restartCount": 0,
+        "started": true,
+        "state": {
+          "running": {
+            "startedAt": "2026-11-05T15:02:19Z"
+          }
+        },
+        "volumeMounts": [
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-r4r9v",
+            "readOnly": true,
+            "recursiveReadOnly": "Disabled"
+          }
+        ]
+      }
+    ],
+    "hostIP": "10.0.2.15",
+    "hostIPs": [
+      {
+        "ip": "10.0.2.15"
+      },
+      {
+        "ip": "fec0::5054:ff:fe12:3456"
+      }
+    ],
+    "observedGeneration": 1,
+    "phase": "Running",
+    "podIP": "10.42.0.15",
+    "podIPs": [
+      {
+        "ip": "10.42.0.15"
+      }
+    ],
+    "qosClass": "Burstable",
+    "resources": {
+      "limits": {
+        "cpu": "1500m",
+        "memory": "128Mi"
+      },
+      "requests": {
+        "cpu": "1100m",
+        "memory": "64Mi"
+      }
+    },
+    "startTime": "2026-11-05T15:01:57Z"
+  }
+}

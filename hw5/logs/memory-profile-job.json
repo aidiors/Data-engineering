@@ -1,0 +1,138 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{},\"name\":\"memory-profile\",\"namespace\":\"hw5\"},\"spec\":{\"activeDeadlineSeconds\":1800,\"backoffLimit\":0,\"template\":{\"spec\":{\"containers\":[{\"args\":[\"count\"],\"env\":[{\"name\":\"RESULT_DIR\",\"value\":\"/results\"},{\"name\":\"JOB_NAME\",\"value\":\"memory-profile\"}],\"image\":\"hw5-skills:1\",\"imagePullPolicy\":\"Never\",\"name\":\"calculation\",\"resources\":{\"limits\":{\"cpu\":\"1\",\"memory\":\"256Mi\"},\"requests\":{\"cpu\":\"250m\",\"memory\":\"64Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/input\",\"name\":\"input\",\"readOnly\":true},{\"mountPath\":\"/results\",\"name\":\"results\"}]}],\"restartPolicy\":\"Never\",\"volumes\":[{\"hostPath\":{\"path\":\"/opt/hw5/input\",\"type\":\"Directory\"},\"name\":\"input\"},{\"hostPath\":{\"path\":\"/opt/hw5/results\",\"type\":\"Directory\"},\"name\":\"results\"}]}}}}\n"
+    },
+    "creationTimestamp": "2026-11-05T14:44:34Z",
+    "generation": 1,
+    "labels": {
+      "batch.kubernetes.io/controller-uid": "b1250d9f-4608-4ba6-bd84-411b1dd2e6ca",
+      "batch.kubernetes.io/job-name": "memory-profile",
+      "controller-uid": "b1250d9f-4608-4ba6-bd84-411b1dd2e6ca",
+      "job-name": "memory-profile"
+    },
+    "name": "memory-profile",
+    "namespace": "hw5",
+    "resourceVersion": "855",
+    "uid": "b1250d9f-4608-4ba6-bd84-411b1dd2e6ca"
+  },
+  "spec": {
+    "activeDeadlineSeconds": 1800,
+    "backoffLimit": 0,
+    "completionMode": "NonIndexed",
+    "completions": 1,
+    "manualSelector": false,
+    "parallelism": 1,
+    "podReplacementPolicy": "TerminatingOrFailed",
+    "selector": {
+      "matchLabels": {
+        "batch.kubernetes.io/controller-uid": "b1250d9f-4608-4ba6-bd84-411b1dd2e6ca"
+      }
+    },
+    "suspend": false,
+    "template": {
+      "metadata": {
+        "labels": {
+          "batch.kubernetes.io/controller-uid": "b1250d9f-4608-4ba6-bd84-411b1dd2e6ca",
+          "batch.kubernetes.io/job-name": "memory-profile",
+          "controller-uid": "b1250d9f-4608-4ba6-bd84-411b1dd2e6ca",
+          "job-name": "memory-profile"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "args": [
+              "count"
+            ],
+            "env": [
+              {
+                "name": "RESULT_DIR",
+                "value": "/results"
+              },
+              {
+                "name": "JOB_NAME",
+                "value": "memory-profile"
+              }
+            ],
+            "image": "hw5-skills:1",
+            "imagePullPolicy": "Never",
+            "name": "calculation",
+            "resources": {
+              "limits": {
+                "cpu": "1",
+                "memory": "256Mi"
+              },
+              "requests": {
+                "cpu": "250m",
+                "memory": "64Mi"
+              }
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "volumeMounts": [
+              {
+                "mountPath": "/input",
+                "name": "input",
+                "readOnly": true
+              },
+              {
+                "mountPath": "/results",
+                "name": "results"
+              }
+            ]
+          }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "restartPolicy": "Never",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "terminationGracePeriodSeconds": 30,
+        "volumes": [
+          {
+            "hostPath": {
+              "path": "/opt/hw5/input",
+              "type": "Directory"
+            },
+            "name": "input"
+          },
+          {
+            "hostPath": {
+              "path": "/opt/hw5/results",
+              "type": "Directory"
+            },
+            "name": "results"
+          }
+        ]
+      }
+    }
+  },
+  "status": {
+    "completionTime": "2026-11-05T14:47:27Z",
+    "conditions": [
+      {
+        "lastProbeTime": "2026-11-05T14:47:27Z",
+        "lastTransitionTime": "2026-11-05T14:47:27Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "SuccessCriteriaMet"
+      },
+      {
+        "lastProbeTime": "2026-11-05T14:47:27Z",
+        "lastTransitionTime": "2026-11-05T14:47:27Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "Complete"
+      }
+    ],
+    "ready": 0,
+    "startTime": "2026-11-05T14:44:35Z",
+    "succeeded": 1,
+    "terminating": 0,
+    "uncountedTerminatedPods": {}
+  }
+}

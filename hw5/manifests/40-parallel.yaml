@@ -1,0 +1,38 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pairs-parallel
+  namespace: hw5
+spec:
+  completionMode: Indexed
+  completions: 4
+  parallelism: 2
+  backoffLimit: 0
+  activeDeadlineSeconds: 1800
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: calculation
+        image: hw5-skills:1
+        imagePullPolicy: Never
+        args:
+        - count
+        - --indexed
+        envFrom:
+        - secretRef:
+            name: s3-credentials
+        env:
+        - name: S3_ENDPOINT
+          value: http://rustfs.hw5.svc.cluster.local:9000
+        - name: JOB_COMPLETION_INDEX
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.annotations['batch.kubernetes.io/job-completion-index']
+        resources:
+          requests:
+            cpu: 400m
+            memory: 64Mi
+          limits:
+            cpu: '1'
+            memory: 80Mi

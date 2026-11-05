@@ -1,0 +1,23 @@
+$ sudo k3s kubectl -n hw5 get jobs,pods,pvc -o wide
+NAME                       STATUS     COMPLETIONS   DURATION   AGE     CONTAINERS    IMAGES         SELECTOR
+job.batch/memory-oom       Failed     0/1           27m        27m     calculation   hw5-skills:1   batch.kubernetes.io/controller-uid=d46e168a-d685-43cf-b46b-c96e8d615e18
+job.batch/memory-profile   Complete   1/1           2m52s      33m     calculation   hw5-skills:1   batch.kubernetes.io/controller-uid=b1250d9f-4608-4ba6-bd84-411b1dd2e6ca
+job.batch/memory-tuned     Complete   1/1           5m13s      27m     calculation   hw5-skills:1   batch.kubernetes.io/controller-uid=4a972111-95e8-40e6-9cb7-2961dd07c549
+job.batch/pairs-parallel   Complete   4/4           4m34s      12m     calculation   hw5-skills:1   batch.kubernetes.io/controller-uid=f9b628a4-5054-4fe1-859d-55c8f5187286
+job.batch/pairs-reduce     Complete   1/1           26s        7m33s   reduce        hw5-skills:1   batch.kubernetes.io/controller-uid=174aa327-0c2a-4b46-b615-cfe5fe51d3f7
+job.batch/seed-s3          Complete   1/1           12m        26m     seed          hw5-skills:1   batch.kubernetes.io/controller-uid=8d1d79c2-cb2d-4fe2-b5f5-6139b6edc539
+
+NAME                          READY   STATUS      RESTARTS   AGE     IP           NODE       NOMINATED NODE   READINESS GATES
+pod/memory-oom-bq7g5          0/1     OOMKilled   0          27m     10.42.0.8    hw5-node   <none>           <none>
+pod/memory-profile-6kf6b      0/1     Completed   0          33m     10.42.0.6    hw5-node   <none>           <none>
+pod/memory-tuned-xldgm        0/1     Completed   0          27m     10.42.0.10   hw5-node   <none>           <none>
+pod/pairs-parallel-0-pkkmp    0/1     Completed   0          12m     10.42.0.16   hw5-node   <none>           <none>
+pod/pairs-parallel-1-q6npl    0/1     Completed   0          12m     10.42.0.17   hw5-node   <none>           <none>
+pod/pairs-parallel-2-j2xzm    0/1     Completed   0          10m     10.42.0.18   hw5-node   <none>           <none>
+pod/pairs-parallel-3-t5f97    0/1     Completed   0          10m     10.42.0.19   hw5-node   <none>           <none>
+pod/pairs-reduce-wnbjr        0/1     Completed   0          7m33s   10.42.0.20   hw5-node   <none>           <none>
+pod/rustfs-7bdfb8f85f-5jznk   1/1     Running     0          27m     10.42.0.11   hw5-node   <none>           <none>
+pod/seed-s3-spphj             0/1     Completed   0          26m     10.42.0.12   hw5-node   <none>           <none>
+
+NAME                                STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE   VOLUMEMODE
+persistentvolumeclaim/rustfs-data   Bound    pvc-2660a2ea-9d11-4f52-a445-adfce893ec96   10Gi       RWO            local-path     <unset>                 27m   Filesystem

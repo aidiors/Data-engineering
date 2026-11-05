@@ -1,0 +1,38 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: seed-s3
+  namespace: hw5
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 1800
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: seed
+          image: hw5-skills:1
+          imagePullPolicy: Never
+          args: [seed, --parts, "4"]
+          envFrom:
+            - secretRef:
+                name: s3-credentials
+          env:
+            - name: S3_ENDPOINT
+              value: http://rustfs.hw5.svc.cluster.local:9000
+          resources:
+            requests:
+              cpu: 250m
+              memory: 128Mi
+            limits:
+              cpu: "1"
+              memory: 512Mi
+          volumeMounts:
+            - name: input
+              mountPath: /input
+              readOnly: true
+      volumes:
+        - name: input
+          hostPath:
+            path: /opt/hw5/input
+            type: Directory

@@ -1,0 +1,2 @@
+$ sudo k3s kubectl apply -f /opt/hw5/project/hw5/manifests/11-memory-oom.yaml
+job.batch/memory-oom unchanged

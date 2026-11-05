@@ -1,0 +1,2 @@
+$ sudo k3s kubectl -n hw5 wait --for=condition=complete job/seed-s3 --timeout=1200s
+job.batch/seed-s3 condition met

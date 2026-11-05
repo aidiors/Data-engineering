@@ -1,0 +1,2 @@
+$ sudo k3s kubectl apply -f /opt/hw5/project/hw5/manifests/30-seed.yaml
+job.batch/seed-s3 created

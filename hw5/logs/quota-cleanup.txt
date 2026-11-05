@@ -1,0 +1,2 @@
+$ sudo k3s kubectl -n hw5-quota delete pod quota-first --wait=true
+pod "quota-first" deleted from hw5-quota namespace

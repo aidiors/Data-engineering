@@ -1,0 +1,44 @@
+$ sudo docker pull rustfs/rustfs:1.0.0 && sudo docker pull busybox:1.37
+1.0.0: Pulling from rustfs/rustfs
+55afa1ecc21d: Pulling fs layer
+fc60adad4a1d: Pulling fs layer
+2db50cf901eb: Pulling fs layer
+eebc17ed47f7: Pulling fs layer
+a43ede1efa93: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+e993fc96bab5: Pulling fs layer
+a43ede1efa93: Waiting
+4f4fb700ef54: Waiting
+e993fc96bab5: Waiting
+eebc17ed47f7: Waiting
+2db50cf901eb: Verifying Checksum
+2db50cf901eb: Download complete
+55afa1ecc21d: Verifying Checksum
+55afa1ecc21d: Download complete
+a43ede1efa93: Verifying Checksum
+a43ede1efa93: Download complete
+fc60adad4a1d: Verifying Checksum
+fc60adad4a1d: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+e993fc96bab5: Download complete
+55afa1ecc21d: Pull complete
+fc60adad4a1d: Pull complete
+2db50cf901eb: Pull complete
+eebc17ed47f7: Verifying Checksum
+eebc17ed47f7: Download complete
+eebc17ed47f7: Pull complete
+a43ede1efa93: Pull complete
+4f4fb700ef54: Pull complete
+e993fc96bab5: Pull complete
+Digest: sha256:8cc9801755448b71a786705ce76692c77e14936cccd87cf2fc31842e58f4d1ff
+Status: Downloaded newer image for rustfs/rustfs:1.0.0
+docker.io/rustfs/rustfs:1.0.0
+1.37: Pulling from library/busybox
+68fe9bff2ad4: Pulling fs layer
+68fe9bff2ad4: Verifying Checksum
+68fe9bff2ad4: Download complete
+68fe9bff2ad4: Pull complete
+Digest: sha256:a7dbc319b1438115a207e11930dc4bb3e643dcb3ec0bdd694bb36cd8fad289ec
+Status: Downloaded newer image for busybox:1.37
+docker.io/library/busybox:1.37

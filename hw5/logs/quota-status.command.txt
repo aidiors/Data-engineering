@@ -1,0 +1,40 @@
+$ sudo k3s kubectl -n hw5-quota get resourcequota student-quota -o json
+{
+    "apiVersion": "v1",
+    "kind": "ResourceQuota",
+    "metadata": {
+        "annotations": {
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"ResourceQuota\",\"metadata\":{\"annotations\":{},\"name\":\"student-quota\",\"namespace\":\"hw5-quota\"},\"spec\":{\"hard\":{\"limits.cpu\":\"1\",\"limits.memory\":\"512Mi\",\"pods\":\"2\",\"requests.cpu\":\"500m\",\"requests.memory\":\"256Mi\"}}}\n"
+        },
+        "creationTimestamp": "2026-11-05T14:54:58Z",
+        "name": "student-quota",
+        "namespace": "hw5-quota",
+        "resourceVersion": "1220",
+        "uid": "a1c38a61-7716-45ea-9775-9b16e0427492"
+    },
+    "spec": {
+        "hard": {
+            "limits.cpu": "1",
+            "limits.memory": "512Mi",
+            "pods": "2",
+            "requests.cpu": "500m",
+            "requests.memory": "256Mi"
+        }
+    },
+    "status": {
+        "hard": {
+            "limits.cpu": "1",
+            "limits.memory": "512Mi",
+            "pods": "2",
+            "requests.cpu": "500m",
+            "requests.memory": "256Mi"
+        },
+        "used": {
+            "limits.cpu": "500m",
+            "limits.memory": "128Mi",
+            "pods": "1",
+            "requests.cpu": "400m",
+            "requests.memory": "64Mi"
+        }
+    }
+}

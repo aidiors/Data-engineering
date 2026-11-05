@@ -1,0 +1,18 @@
+{
+  "rejected": true,
+  "error": "Error from server (Forbidden): error when creating \"/opt/hw5/project/hw5/manifests/62-quota-rejected.yaml\": pods \"quota-rejected\" is forbidden: exceeded quota: student-quota, requested: requests.cpu=300m, used: requests.cpu=400m, limited: requests.cpu=500m",
+  "used": {
+    "limits.cpu": "500m",
+    "limits.memory": "128Mi",
+    "pods": "1",
+    "requests.cpu": "400m",
+    "requests.memory": "64Mi"
+  },
+  "hard": {
+    "limits.cpu": "1",
+    "limits.memory": "512Mi",
+    "pods": "2",
+    "requests.cpu": "500m",
+    "requests.memory": "256Mi"
+  }
+}

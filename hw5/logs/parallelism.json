@@ -1,0 +1,26 @@
+{
+  "completed_pods": 4,
+  "maximum_concurrent_pods": 2,
+  "intervals": [
+    {
+      "pod": "pairs-parallel-0-pkkmp",
+      "started_at": "2026-11-05T15:05:57Z",
+      "finished_at": "2026-11-05T15:07:52Z"
+    },
+    {
+      "pod": "pairs-parallel-1-q6npl",
+      "started_at": "2026-11-05T15:05:58Z",
+      "finished_at": "2026-11-05T15:07:49Z"
+    },
+    {
+      "pod": "pairs-parallel-2-j2xzm",
+      "started_at": "2026-11-05T15:08:08Z",
+      "finished_at": "2026-11-05T15:09:59Z"
+    },
+    {
+      "pod": "pairs-parallel-3-t5f97",
+      "started_at": "2026-11-05T15:08:19Z",
+      "finished_at": "2026-11-05T15:10:10Z"
+    }
+  ]
+}

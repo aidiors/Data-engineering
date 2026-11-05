@@ -1,0 +1,42 @@
+[
+  {
+    "key": "input/part-000.csv",
+    "bytes": 211924757
+  },
+  {
+    "key": "input/part-001.csv",
+    "bytes": 211842147
+  },
+  {
+    "key": "input/part-002.csv",
+    "bytes": 211924078
+  },
+  {
+    "key": "input/part-003.csv",
+    "bytes": 212158460
+  },
+  {
+    "key": "partials/part-000.json",
+    "bytes": 182735
+  },
+  {
+    "key": "partials/part-001.json",
+    "bytes": 172984
+  },
+  {
+    "key": "partials/part-002.json",
+    "bytes": 180273
+  },
+  {
+    "key": "partials/part-003.json",
+    "bytes": 171329
+  },
+  {
+    "key": "raw/it_vacancies_2024.csv",
+    "bytes": 847619384
+  },
+  {
+    "key": "results/result.json",
+    "bytes": 461351
+  }
+]

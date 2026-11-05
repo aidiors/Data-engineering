@@ -1,0 +1,2 @@
+$ sudo k3s kubectl -n hw5 delete pod high-priority --wait=true
+pod "high-priority" deleted from hw5 namespace

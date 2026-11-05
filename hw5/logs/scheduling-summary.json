@@ -1,0 +1,38 @@
+{
+  "pending_reason": "Insufficient cpu",
+  "low_uid": "7f16d21e-2e00-411a-ad76-70c53b21a94b",
+  "high_uid": "11d20897-faef-4cbf-a3bf-8e9c28f6319b",
+  "low_priority": -10,
+  "high_priority": 1000,
+  "preemption_event": [
+    {
+      "action": "Preempting",
+      "apiVersion": "v1",
+      "eventTime": "2026-11-05T15:01:46.086014Z",
+      "firstTimestamp": null,
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "low-priority",
+        "namespace": "hw5",
+        "resourceVersion": "1431",
+        "uid": "7f16d21e-2e00-411a-ad76-70c53b21a94b"
+      },
+      "kind": "Event",
+      "lastTimestamp": null,
+      "message": "Preempted by pod 11d20897-faef-4cbf-a3bf-8e9c28f6319b on node hw5-node",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T15:01:46Z",
+        "name": "low-priority.18e52e464f150b42",
+        "namespace": "hw5",
+        "resourceVersion": "1454",
+        "uid": "8f742122-25a8-4e3e-bab7-238308ee733b"
+      },
+      "reason": "Preempted",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "default-scheduler-hw5-node",
+      "source": {},
+      "type": "Normal"
+    }
+  ]
+}

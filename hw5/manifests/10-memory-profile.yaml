@@ -1,0 +1,43 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: memory-profile
+  namespace: hw5
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 1800
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: calculation
+          image: hw5-skills:1
+          imagePullPolicy: Never
+          args: [count]
+          env:
+            - name: RESULT_DIR
+              value: /results
+            - name: JOB_NAME
+              value: memory-profile
+          resources:
+            requests:
+              cpu: 250m
+              memory: 64Mi
+            limits:
+              cpu: "1"
+              memory: 256Mi
+          volumeMounts:
+            - name: input
+              mountPath: /input
+              readOnly: true
+            - name: results
+              mountPath: /results
+      volumes:
+        - name: input
+          hostPath:
+            path: /opt/hw5/input
+            type: Directory
+        - name: results
+          hostPath:
+            path: /opt/hw5/results
+            type: Directory

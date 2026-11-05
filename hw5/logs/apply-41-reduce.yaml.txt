@@ -1,0 +1,2 @@
+$ sudo k3s kubectl apply -f /opt/hw5/project/hw5/manifests/41-reduce.yaml
+job.batch/pairs-reduce created

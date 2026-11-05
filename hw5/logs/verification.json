@@ -1,0 +1,11 @@
+{
+  "equal_to_hw3": true,
+  "all_pair_frequencies_equal": true,
+  "all_ids_equal": true,
+  "top10_equal": true,
+  "source_rows": 229388,
+  "selected_rows": 6057,
+  "unique_pairs": 6040,
+  "sum_frequencies": 36991,
+  "sha256_pairs": "2d078d1c945a9288e03f4f882f26e9a40387e1407a05de2ec2443bdd1dd18602"
+}

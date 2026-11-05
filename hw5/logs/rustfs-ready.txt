@@ -1,0 +1,3 @@
+$ sudo k3s kubectl -n hw5 rollout status deployment/rustfs --timeout=600s
+Waiting for deployment "rustfs" rollout to finish: 0 of 1 updated replicas are available...
+deployment "rustfs" successfully rolled out

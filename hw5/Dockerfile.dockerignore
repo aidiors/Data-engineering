@@ -1,0 +1,11 @@
+**
+!hw3/
+!hw3/config.json
+!hw3/frontend_lake/
+!hw3/frontend_lake/__init__.py
+!hw3/frontend_lake/common.py
+!hw3/frontend_lake/validation.py
+!hw5/
+!hw5/requirements.txt
+!hw5/src/
+!hw5/src/app.py

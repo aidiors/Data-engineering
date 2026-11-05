@@ -1,0 +1,72 @@
+[
+  {
+    "skills": [
+      "javascript",
+      "react"
+    ],
+    "frequency": 951
+  },
+  {
+    "skills": [
+      "git",
+      "javascript"
+    ],
+    "frequency": 950
+  },
+  {
+    "skills": [
+      "html",
+      "javascript"
+    ],
+    "frequency": 793
+  },
+  {
+    "skills": [
+      "css",
+      "html"
+    ],
+    "frequency": 737
+  },
+  {
+    "skills": [
+      "javascript",
+      "typescript"
+    ],
+    "frequency": 737
+  },
+  {
+    "skills": [
+      "css",
+      "javascript"
+    ],
+    "frequency": 673
+  },
+  {
+    "skills": [
+      "react",
+      "typescript"
+    ],
+    "frequency": 596
+  },
+  {
+    "skills": [
+      "css3",
+      "html5"
+    ],
+    "frequency": 551
+  },
+  {
+    "skills": [
+      "git",
+      "html"
+    ],
+    "frequency": 515
+  },
+  {
+    "skills": [
+      "css3",
+      "javascript"
+    ],
+    "frequency": 511
+  }
+]

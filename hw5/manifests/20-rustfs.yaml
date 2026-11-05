@@ -1,0 +1,107 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: rustfs-data
+  namespace: hw5
+spec:
+  accessModes: [ReadWriteOnce]
+  storageClassName: local-path
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rustfs
+  namespace: hw5
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: rustfs
+  template:
+    metadata:
+      labels:
+        app: rustfs
+    spec:
+      securityContext:
+        fsGroup: 10001
+      initContainers:
+        - name: directories
+          image: busybox:1.37
+          command: [sh, -c, 'mkdir -p /data/vol1 /data/vol2 /data/vol3 /data/vol4 && chown -R 10001:10001 /data']
+          volumeMounts:
+            - name: data
+              mountPath: /data
+          resources:
+            requests:
+              cpu: 50m
+              memory: 16Mi
+            limits:
+              cpu: 200m
+              memory: 64Mi
+      containers:
+        - name: rustfs
+          image: rustfs/rustfs:1.0.0
+          securityContext:
+            runAsUser: 10001
+            runAsGroup: 10001
+          ports:
+            - name: s3
+              containerPort: 9000
+          env:
+            - name: RUSTFS_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: s3-credentials
+                  key: S3_ACCESS_KEY
+            - name: RUSTFS_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: s3-credentials
+                  key: S3_SECRET_KEY
+            - name: RUSTFS_VOLUMES
+              value: /data/vol{1...4}
+            - name: RUSTFS_ADDRESS
+              value: :9000
+            - name: RUSTFS_CONSOLE_ENABLE
+              value: "false"
+            - name: RUSTFS_UNSAFE_BYPASS_DISK_CHECK
+              value: "true"
+          resources:
+            requests:
+              cpu: 250m
+              memory: 512Mi
+            limits:
+              cpu: "1"
+              memory: 1Gi
+          readinessProbe:
+            httpGet:
+              path: /health/ready
+              port: s3
+            initialDelaySeconds: 10
+            periodSeconds: 5
+          volumeMounts:
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: rustfs-data
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rustfs
+  namespace: hw5
+spec:
+  type: NodePort
+  selector:
+    app: rustfs
+  ports:
+    - port: 9000
+      targetPort: s3
+      nodePort: 30900

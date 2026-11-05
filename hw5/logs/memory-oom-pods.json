@@ -1,0 +1,296 @@
+{
+  "apiVersion": "v1",
+  "items": [
+    {
+      "apiVersion": "v1",
+      "kind": "Pod",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:50:26Z",
+        "generateName": "memory-oom-",
+        "generation": 1,
+        "labels": {
+          "batch.kubernetes.io/controller-uid": "d46e168a-d685-43cf-b46b-c96e8d615e18",
+          "batch.kubernetes.io/job-name": "memory-oom",
+          "controller-uid": "d46e168a-d685-43cf-b46b-c96e8d615e18",
+          "job-name": "memory-oom"
+        },
+        "name": "memory-oom-bq7g5",
+        "namespace": "hw5",
+        "ownerReferences": [
+          {
+            "apiVersion": "batch/v1",
+            "blockOwnerDeletion": true,
+            "controller": true,
+            "kind": "Job",
+            "name": "memory-oom",
+            "uid": "d46e168a-d685-43cf-b46b-c96e8d615e18"
+          }
+        ],
+        "resourceVersion": "1009",
+        "uid": "53119821-af48-43c0-a5ee-1f198a636abe"
+      },
+      "spec": {
+        "containers": [
+          {
+            "args": [
+              "count"
+            ],
+            "env": [
+              {
+                "name": "RESULT_DIR",
+                "value": "/results"
+              },
+              {
+                "name": "JOB_NAME",
+                "value": "memory-oom"
+              }
+            ],
+            "image": "hw5-skills:1",
+            "imagePullPolicy": "Never",
+            "name": "calculation",
+            "resources": {
+              "limits": {
+                "cpu": "1",
+                "memory": "16Mi"
+              },
+              "requests": {
+                "cpu": "250m",
+                "memory": "8Mi"
+              }
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "volumeMounts": [
+              {
+                "mountPath": "/input",
+                "name": "input",
+                "readOnly": true
+              },
+              {
+                "mountPath": "/results",
+                "name": "results"
+              },
+              {
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                "name": "kube-api-access-66vmv",
+                "readOnly": true
+              }
+            ]
+          }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "enableServiceLinks": true,
+        "nodeName": "hw5-node",
+        "preemptionPolicy": "PreemptLowerPriority",
+        "priority": 0,
+        "restartPolicy": "Never",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "serviceAccount": "default",
+        "serviceAccountName": "default",
+        "terminationGracePeriodSeconds": 30,
+        "tolerations": [
+          {
+            "effect": "NoExecute",
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "tolerationSeconds": 300
+          },
+          {
+            "effect": "NoExecute",
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "tolerationSeconds": 300
+          }
+        ],
+        "volumes": [
+          {
+            "hostPath": {
+              "path": "/opt/hw5/input",
+              "type": "Directory"
+            },
+            "name": "input"
+          },
+          {
+            "hostPath": {
+              "path": "/opt/hw5/results",
+              "type": "Directory"
+            },
+            "name": "results"
+          },
+          {
+            "name": "kube-api-access-66vmv",
+            "projected": {
+              "defaultMode": 420,
+              "sources": [
+                {
+                  "serviceAccountToken": {
+                    "expirationSeconds": 3607,
+                    "path": "token"
+                  }
+                },
+                {
+                  "configMap": {
+                    "items": [
+                      {
+                        "key": "ca.crt",
+                        "path": "ca.crt"
+                      }
+                    ],
+                    "name": "kube-root-ca.crt"
+                  }
+                },
+                {
+                  "downwardAPI": {
+                    "items": [
+                      {
+                        "fieldRef": {
+                          "apiVersion": "v1",
+                          "fieldPath": "metadata.namespace"
+                        },
+                        "path": "namespace"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "status": {
+        "allocatedResources": {
+          "cpu": "250m",
+          "memory": "8Mi"
+        },
+        "conditions": [
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-11-05T14:50:52Z",
+            "message": "pod sandbox is not ready",
+            "observedGeneration": 1,
+            "reason": "PodSandboxNotReady",
+            "status": "False",
+            "type": "PodReadyToStartContainers"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-11-05T14:50:27Z",
+            "observedGeneration": 1,
+            "status": "True",
+            "type": "Initialized"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-11-05T14:50:47Z",
+            "observedGeneration": 1,
+            "reason": "PodFailed",
+            "status": "False",
+            "type": "Ready"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-11-05T14:50:47Z",
+            "observedGeneration": 1,
+            "reason": "PodFailed",
+            "status": "False",
+            "type": "ContainersReady"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-11-05T14:50:27Z",
+            "observedGeneration": 1,
+            "status": "True",
+            "type": "PodScheduled"
+          }
+        ],
+        "containerStatuses": [
+          {
+            "allocatedResources": {
+              "cpu": "250m",
+              "memory": "8Mi"
+            },
+            "containerID": "docker://1d77fb62bf68081a11caa05b383e58f78d9e768c091407c937677073e4fa6f87",
+            "image": "hw5-skills:1",
+            "imageID": "docker://sha256:97e2681895e81a1993a4e6c8aec7092254569c8372d267c4c46388e96a7edbea",
+            "lastState": {},
+            "name": "calculation",
+            "ready": false,
+            "resources": {
+              "limits": {
+                "cpu": "1",
+                "memory": "16Mi"
+              },
+              "requests": {
+                "cpu": "250m",
+                "memory": "8Mi"
+              }
+            },
+            "restartCount": 0,
+            "started": false,
+            "state": {
+              "terminated": {
+                "containerID": "docker://1d77fb62bf68081a11caa05b383e58f78d9e768c091407c937677073e4fa6f87",
+                "exitCode": 137,
+                "finishedAt": "2026-11-05T14:50:44Z",
+                "reason": "OOMKilled",
+                "startedAt": "2026-11-05T14:50:39Z"
+              }
+            },
+            "volumeMounts": [
+              {
+                "mountPath": "/input",
+                "name": "input",
+                "readOnly": true,
+                "recursiveReadOnly": "Disabled"
+              },
+              {
+                "mountPath": "/results",
+                "name": "results"
+              },
+              {
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                "name": "kube-api-access-66vmv",
+                "readOnly": true,
+                "recursiveReadOnly": "Disabled"
+              }
+            ]
+          }
+        ],
+        "hostIP": "10.0.2.15",
+        "hostIPs": [
+          {
+            "ip": "10.0.2.15"
+          },
+          {
+            "ip": "fec0::5054:ff:fe12:3456"
+          }
+        ],
+        "observedGeneration": 1,
+        "phase": "Failed",
+        "podIP": "10.42.0.8",
+        "podIPs": [
+          {
+            "ip": "10.42.0.8"
+          }
+        ],
+        "qosClass": "Burstable",
+        "resources": {
+          "limits": {
+            "cpu": "1",
+            "memory": "16Mi"
+          },
+          "requests": {
+            "cpu": "232m",
+            "memory": "8Mi"
+          }
+        },
+        "startTime": "2026-11-05T14:50:27Z"
+      }
+    }
+  ],
+  "kind": "List",
+  "metadata": {
+    "resourceVersion": ""
+  }
+}

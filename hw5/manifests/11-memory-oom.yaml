@@ -1,0 +1,44 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: memory-oom
+  namespace: hw5
+spec:
+  activeDeadlineSeconds: 1800
+  backoffLimit: 0
+  template:
+    spec:
+      containers:
+      - args:
+        - count
+        env:
+        - name: RESULT_DIR
+          value: /results
+        - name: JOB_NAME
+          value: memory-oom
+        image: hw5-skills:1
+        imagePullPolicy: Never
+        name: calculation
+        resources:
+          limits:
+            cpu: '1'
+            memory: 16Mi
+          requests:
+            cpu: 250m
+            memory: 8Mi
+        volumeMounts:
+        - mountPath: /input
+          name: input
+          readOnly: true
+        - mountPath: /results
+          name: results
+      restartPolicy: Never
+      volumes:
+      - hostPath:
+          path: /opt/hw5/input
+          type: Directory
+        name: input
+      - hostPath:
+          path: /opt/hw5/results
+          type: Directory
+        name: results

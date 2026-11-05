@@ -1,0 +1,194 @@
+$ sudo k3s kubectl -n hw5 get deployment rustfs -o json
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+        "annotations": {
+            "deployment.kubernetes.io/revision": "1",
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{},\"name\":\"rustfs\",\"namespace\":\"hw5\"},\"spec\":{\"replicas\":1,\"selector\":{\"matchLabels\":{\"app\":\"rustfs\"}},\"strategy\":{\"type\":\"Recreate\"},\"template\":{\"metadata\":{\"labels\":{\"app\":\"rustfs\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"RUSTFS_ACCESS_KEY\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"S3_ACCESS_KEY\",\"name\":\"s3-credentials\"}}},{\"name\":\"RUSTFS_SECRET_KEY\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"S3_SECRET_KEY\",\"name\":\"s3-credentials\"}}},{\"name\":\"RUSTFS_VOLUMES\",\"value\":\"/data/vol{1...4}\"},{\"name\":\"RUSTFS_ADDRESS\",\"value\":\":9000\"},{\"name\":\"RUSTFS_CONSOLE_ENABLE\",\"value\":\"false\"},{\"name\":\"RUSTFS_UNSAFE_BYPASS_DISK_CHECK\",\"value\":\"true\"}],\"image\":\"rustfs/rustfs:1.0.0\",\"name\":\"rustfs\",\"ports\":[{\"containerPort\":9000,\"name\":\"s3\"}],\"readinessProbe\":{\"httpGet\":{\"path\":\"/health/ready\",\"port\":\"s3\"},\"initialDelaySeconds\":10,\"periodSeconds\":5},\"resources\":{\"limits\":{\"cpu\":\"1\",\"memory\":\"1Gi\"},\"requests\":{\"cpu\":\"250m\",\"memory\":\"512Mi\"}},\"securityContext\":{\"runAsGroup\":10001,\"runAsUser\":10001},\"volumeMounts\":[{\"mountPath\":\"/data\",\"name\":\"data\"}]}],\"initContainers\":[{\"command\":[\"sh\",\"-c\",\"mkdir -p /data/vol1 /data/vol2 /data/vol3 /data/vol4 \\u0026\\u0026 chown -R 10001:10001 /data\"],\"image\":\"busybox:1.37\",\"name\":\"directories\",\"resources\":{\"limits\":{\"cpu\":\"200m\",\"memory\":\"64Mi\"},\"requests\":{\"cpu\":\"50m\",\"memory\":\"16Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/data\",\"name\":\"data\"}]}],\"securityContext\":{\"fsGroup\":10001},\"volumes\":[{\"name\":\"data\",\"persistentVolumeClaim\":{\"claimName\":\"rustfs-data\"}}]}}}}\n"
+        },
+        "creationTimestamp": "2026-11-05T14:50:45Z",
+        "generation": 1,
+        "name": "rustfs",
+        "namespace": "hw5",
+        "resourceVersion": "1086",
+        "uid": "21f3e08f-b293-4e01-9d0e-5935de28b791"
+    },
+    "spec": {
+        "progressDeadlineSeconds": 600,
+        "replicas": 1,
+        "revisionHistoryLimit": 10,
+        "selector": {
+            "matchLabels": {
+                "app": "rustfs"
+            }
+        },
+        "strategy": {
+            "type": "Recreate"
+        },
+        "template": {
+            "metadata": {
+                "labels": {
+                    "app": "rustfs"
+                }
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "env": [
+                            {
+                                "name": "RUSTFS_ACCESS_KEY",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "S3_ACCESS_KEY",
+                                        "name": "s3-credentials"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "RUSTFS_SECRET_KEY",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "S3_SECRET_KEY",
+                                        "name": "s3-credentials"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "RUSTFS_VOLUMES",
+                                "value": "/data/vol{1...4}"
+                            },
+                            {
+                                "name": "RUSTFS_ADDRESS",
+                                "value": ":9000"
+                            },
+                            {
+                                "name": "RUSTFS_CONSOLE_ENABLE",
+                                "value": "false"
+                            },
+                            {
+                                "name": "RUSTFS_UNSAFE_BYPASS_DISK_CHECK",
+                                "value": "true"
+                            }
+                        ],
+                        "image": "rustfs/rustfs:1.0.0",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "rustfs",
+                        "ports": [
+                            {
+                                "containerPort": 9000,
+                                "name": "s3",
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "readinessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/health/ready",
+                                "port": "s3",
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 10,
+                            "periodSeconds": 5,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 1
+                        },
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "1Gi"
+                            },
+                            "requests": {
+                                "cpu": "250m",
+                                "memory": "512Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "runAsGroup": 10001,
+                            "runAsUser": 10001
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/data",
+                                "name": "data"
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "initContainers": [
+                    {
+                        "command": [
+                            "sh",
+                            "-c",
+                            "mkdir -p /data/vol1 /data/vol2 /data/vol3 /data/vol4 \u0026\u0026 chown -R 10001:10001 /data"
+                        ],
+                        "image": "busybox:1.37",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "directories",
+                        "resources": {
+                            "limits": {
+                                "cpu": "200m",
+                                "memory": "64Mi"
+                            },
+                            "requests": {
+                                "cpu": "50m",
+                                "memory": "16Mi"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/data",
+                                "name": "data"
+                            }
+                        ]
+                    }
+                ],
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "fsGroup": 10001
+                },
+                "terminationGracePeriodSeconds": 30,
+                "volumes": [
+                    {
+                        "name": "data",
+                        "persistentVolumeClaim": {
+                            "claimName": "rustfs-data"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "status": {
+        "availableReplicas": 1,
+        "conditions": [
+            {
+                "lastTransitionTime": "2026-11-05T14:51:53Z",
+                "lastUpdateTime": "2026-11-05T14:51:53Z",
+                "message": "Deployment has minimum availability.",
+                "reason": "MinimumReplicasAvailable",
+                "status": "True",
+                "type": "Available"
+            },
+            {
+                "lastTransitionTime": "2026-11-05T14:50:45Z",
+                "lastUpdateTime": "2026-11-05T14:51:53Z",
+                "message": "ReplicaSet \"rustfs-7bdfb8f85f\" has successfully progressed.",
+                "reason": "NewReplicaSetAvailable",
+                "status": "True",
+                "type": "Progressing"
+            }
+        ],
+        "observedGeneration": 1,
+        "readyReplicas": 1,
+        "replicas": 1,
+        "terminatingReplicas": 0,
+        "updatedReplicas": 1
+    }
+}

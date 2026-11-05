@@ -1,0 +1,2 @@
+$ sudo k3s kubectl -n hw5 wait --for=condition=complete job/pairs-reduce --timeout=1200s
+job.batch/pairs-reduce condition met

@@ -1,0 +1,15 @@
+{
+  "profile_limit_mi": 256,
+  "oom_limit_mi": 16,
+  "measured_peak_bytes": 42901504,
+  "tuned_limit_mi": 80,
+  "tuned_request_mi": 64,
+  "tuned_peak": {
+    "memory.current": "30769152",
+    "memory.max": "83886080",
+    "memory.peak": "31698944",
+    "process_peak_kib": 41708
+  },
+  "oom_reason": "OOMKilled",
+  "oom_exit_code": 137
+}

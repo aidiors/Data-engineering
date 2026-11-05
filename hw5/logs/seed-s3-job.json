@@ -1,0 +1,132 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{},\"name\":\"seed-s3\",\"namespace\":\"hw5\"},\"spec\":{\"activeDeadlineSeconds\":1800,\"backoffLimit\":0,\"template\":{\"spec\":{\"containers\":[{\"args\":[\"seed\",\"--parts\",\"4\"],\"env\":[{\"name\":\"S3_ENDPOINT\",\"value\":\"http://rustfs.hw5.svc.cluster.local:9000\"}],\"envFrom\":[{\"secretRef\":{\"name\":\"s3-credentials\"}}],\"image\":\"hw5-skills:1\",\"imagePullPolicy\":\"Never\",\"name\":\"seed\",\"resources\":{\"limits\":{\"cpu\":\"1\",\"memory\":\"512Mi\"},\"requests\":{\"cpu\":\"250m\",\"memory\":\"128Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/input\",\"name\":\"input\",\"readOnly\":true}]}],\"restartPolicy\":\"Never\",\"volumes\":[{\"hostPath\":{\"path\":\"/opt/hw5/input\",\"type\":\"Directory\"},\"name\":\"input\"}]}}}}\n"
+    },
+    "creationTimestamp": "2026-11-05T14:52:07Z",
+    "generation": 1,
+    "labels": {
+      "batch.kubernetes.io/controller-uid": "8d1d79c2-cb2d-4fe2-b5f5-6139b6edc539",
+      "batch.kubernetes.io/job-name": "seed-s3",
+      "controller-uid": "8d1d79c2-cb2d-4fe2-b5f5-6139b6edc539",
+      "job-name": "seed-s3"
+    },
+    "name": "seed-s3",
+    "namespace": "hw5",
+    "resourceVersion": "1583",
+    "uid": "8d1d79c2-cb2d-4fe2-b5f5-6139b6edc539"
+  },
+  "spec": {
+    "activeDeadlineSeconds": 1800,
+    "backoffLimit": 0,
+    "completionMode": "NonIndexed",
+    "completions": 1,
+    "manualSelector": false,
+    "parallelism": 1,
+    "podReplacementPolicy": "TerminatingOrFailed",
+    "selector": {
+      "matchLabels": {
+        "batch.kubernetes.io/controller-uid": "8d1d79c2-cb2d-4fe2-b5f5-6139b6edc539"
+      }
+    },
+    "suspend": false,
+    "template": {
+      "metadata": {
+        "labels": {
+          "batch.kubernetes.io/controller-uid": "8d1d79c2-cb2d-4fe2-b5f5-6139b6edc539",
+          "batch.kubernetes.io/job-name": "seed-s3",
+          "controller-uid": "8d1d79c2-cb2d-4fe2-b5f5-6139b6edc539",
+          "job-name": "seed-s3"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "args": [
+              "seed",
+              "--parts",
+              "4"
+            ],
+            "env": [
+              {
+                "name": "S3_ENDPOINT",
+                "value": "http://rustfs.hw5.svc.cluster.local:9000"
+              }
+            ],
+            "envFrom": [
+              {
+                "secretRef": {
+                  "name": "s3-credentials"
+                }
+              }
+            ],
+            "image": "hw5-skills:1",
+            "imagePullPolicy": "Never",
+            "name": "seed",
+            "resources": {
+              "limits": {
+                "cpu": "1",
+                "memory": "512Mi"
+              },
+              "requests": {
+                "cpu": "250m",
+                "memory": "128Mi"
+              }
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "volumeMounts": [
+              {
+                "mountPath": "/input",
+                "name": "input",
+                "readOnly": true
+              }
+            ]
+          }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "restartPolicy": "Never",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "terminationGracePeriodSeconds": 30,
+        "volumes": [
+          {
+            "hostPath": {
+              "path": "/opt/hw5/input",
+              "type": "Directory"
+            },
+            "name": "input"
+          }
+        ]
+      }
+    }
+  },
+  "status": {
+    "completionTime": "2026-11-05T15:04:57Z",
+    "conditions": [
+      {
+        "lastProbeTime": "2026-11-05T15:04:57Z",
+        "lastTransitionTime": "2026-11-05T15:04:57Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "SuccessCriteriaMet"
+      },
+      {
+        "lastProbeTime": "2026-11-05T15:04:57Z",
+        "lastTransitionTime": "2026-11-05T15:04:57Z",
+        "message": "Reached expected number of succeeded pods",
+        "reason": "CompletionsReached",
+        "status": "True",
+        "type": "Complete"
+      }
+    ],
+    "ready": 0,
+    "startTime": "2026-11-05T14:52:07Z",
+    "succeeded": 1,
+    "terminating": 0,
+    "uncountedTerminatedPods": {}
+  }
+}

@@ -1,0 +1,2 @@
+$ sudo k3s kubectl -n hw5 wait --for=condition=complete job/memory-profile --timeout=1200s
+job.batch/memory-profile condition met

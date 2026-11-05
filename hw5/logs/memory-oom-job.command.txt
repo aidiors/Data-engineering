@@ -1,0 +1,138 @@
+$ sudo k3s kubectl -n hw5 get job memory-oom -o json
+{
+    "apiVersion": "batch/v1",
+    "kind": "Job",
+    "metadata": {
+        "annotations": {
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{},\"name\":\"memory-oom\",\"namespace\":\"hw5\"},\"spec\":{\"activeDeadlineSeconds\":1800,\"backoffLimit\":0,\"template\":{\"spec\":{\"containers\":[{\"args\":[\"count\"],\"env\":[{\"name\":\"RESULT_DIR\",\"value\":\"/results\"},{\"name\":\"JOB_NAME\",\"value\":\"memory-oom\"}],\"image\":\"hw5-skills:1\",\"imagePullPolicy\":\"Never\",\"name\":\"calculation\",\"resources\":{\"limits\":{\"cpu\":\"1\",\"memory\":\"16Mi\"},\"requests\":{\"cpu\":\"250m\",\"memory\":\"8Mi\"}},\"volumeMounts\":[{\"mountPath\":\"/input\",\"name\":\"input\",\"readOnly\":true},{\"mountPath\":\"/results\",\"name\":\"results\"}]}],\"restartPolicy\":\"Never\",\"volumes\":[{\"hostPath\":{\"path\":\"/opt/hw5/input\",\"type\":\"Directory\"},\"name\":\"input\"},{\"hostPath\":{\"path\":\"/opt/hw5/results\",\"type\":\"Directory\"},\"name\":\"results\"}]}}}}\n"
+        },
+        "creationTimestamp": "2026-11-05T14:50:26Z",
+        "generation": 1,
+        "labels": {
+            "batch.kubernetes.io/controller-uid": "d46e168a-d685-43cf-b46b-c96e8d615e18",
+            "batch.kubernetes.io/job-name": "memory-oom",
+            "controller-uid": "d46e168a-d685-43cf-b46b-c96e8d615e18",
+            "job-name": "memory-oom"
+        },
+        "name": "memory-oom",
+        "namespace": "hw5",
+        "resourceVersion": "1010",
+        "uid": "d46e168a-d685-43cf-b46b-c96e8d615e18"
+    },
+    "spec": {
+        "activeDeadlineSeconds": 1800,
+        "backoffLimit": 0,
+        "completionMode": "NonIndexed",
+        "completions": 1,
+        "manualSelector": false,
+        "parallelism": 1,
+        "podReplacementPolicy": "TerminatingOrFailed",
+        "selector": {
+            "matchLabels": {
+                "batch.kubernetes.io/controller-uid": "d46e168a-d685-43cf-b46b-c96e8d615e18"
+            }
+        },
+        "suspend": false,
+        "template": {
+            "metadata": {
+                "labels": {
+                    "batch.kubernetes.io/controller-uid": "d46e168a-d685-43cf-b46b-c96e8d615e18",
+                    "batch.kubernetes.io/job-name": "memory-oom",
+                    "controller-uid": "d46e168a-d685-43cf-b46b-c96e8d615e18",
+                    "job-name": "memory-oom"
+                }
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "args": [
+                            "count"
+                        ],
+                        "env": [
+                            {
+                                "name": "RESULT_DIR",
+                                "value": "/results"
+                            },
+                            {
+                                "name": "JOB_NAME",
+                                "value": "memory-oom"
+                            }
+                        ],
+                        "image": "hw5-skills:1",
+                        "imagePullPolicy": "Never",
+                        "name": "calculation",
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "16Mi"
+                            },
+                            "requests": {
+                                "cpu": "250m",
+                                "memory": "8Mi"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/input",
+                                "name": "input",
+                                "readOnly": true
+                            },
+                            {
+                                "mountPath": "/results",
+                                "name": "results"
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "terminationGracePeriodSeconds": 30,
+                "volumes": [
+                    {
+                        "hostPath": {
+                            "path": "/opt/hw5/input",
+                            "type": "Directory"
+                        },
+                        "name": "input"
+                    },
+                    {
+                        "hostPath": {
+                            "path": "/opt/hw5/results",
+                            "type": "Directory"
+                        },
+                        "name": "results"
+                    }
+                ]
+            }
+        }
+    },
+    "status": {
+        "conditions": [
+            {
+                "lastProbeTime": "2026-11-05T14:50:54Z",
+                "lastTransitionTime": "2026-11-05T14:50:54Z",
+                "message": "Job has reached the specified backoff limit",
+                "reason": "BackoffLimitExceeded",
+                "status": "True",
+                "type": "FailureTarget"
+            },
+            {
+                "lastProbeTime": "2026-11-05T14:50:54Z",
+                "lastTransitionTime": "2026-11-05T14:50:54Z",
+                "message": "Job has reached the specified backoff limit",
+                "reason": "BackoffLimitExceeded",
+                "status": "True",
+                "type": "Failed"
+            }
+        ],
+        "failed": 1,
+        "ready": 0,
+        "startTime": "2026-11-05T14:50:26Z",
+        "terminating": 0,
+        "uncountedTerminatedPods": {}
+    }
+}

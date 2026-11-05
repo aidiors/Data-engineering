@@ -1,0 +1,32 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pairs-reduce
+  namespace: hw5
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 1800
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: reduce
+        image: hw5-skills:1
+        imagePullPolicy: Never
+        args:
+        - reduce
+        - --parts
+        - '4'
+        envFrom:
+        - secretRef:
+            name: s3-credentials
+        env:
+        - name: S3_ENDPOINT
+          value: http://rustfs.hw5.svc.cluster.local:9000
+        resources:
+          requests:
+            cpu: 250m
+            memory: 64Mi
+          limits:
+            cpu: '1'
+            memory: 80Mi

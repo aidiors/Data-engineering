@@ -1,0 +1,2 @@
+$ sudo k3s kubectl -n hw5 logs job/seed-s3 --all-containers=true
+{"action": "seed", "source_rows": 229388, "parts": 4, "seconds": 741.3244985429999}

@@ -1,0 +1,4 @@
+paramiko==5.1.0
+pycdlib==1.22.0
+PyYAML==6.0.3
+boto3==1.43.124

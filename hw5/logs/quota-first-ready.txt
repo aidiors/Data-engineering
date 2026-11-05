@@ -1,0 +1,2 @@
+$ sudo k3s kubectl -n hw5-quota wait --for=condition=Ready pod/quota-first --timeout=180s
+pod/quota-first condition met

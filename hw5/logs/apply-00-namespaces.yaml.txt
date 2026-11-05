@@ -1,0 +1,3 @@
+$ sudo k3s kubectl apply -f /opt/hw5/project/hw5/manifests/00-namespaces.yaml
+namespace/hw5 unchanged
+namespace/hw5-quota unchanged

@@ -1,0 +1,2 @@
+$ sudo k3s kubectl -n hw5 wait --for=jsonpath='{.status.failed}'=1 job/memory-oom --timeout=1200s
+job.batch/memory-oom condition met

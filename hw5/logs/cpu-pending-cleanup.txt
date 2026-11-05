@@ -1,0 +1,2 @@
+$ sudo k3s kubectl -n hw5 delete pod cpu-waiting --wait=true
+pod "cpu-waiting" deleted from hw5 namespace

@@ -1,0 +1,2 @@
+$ sudo k3s kubectl apply -f /opt/hw5/project/hw5/manifests/10-memory-profile.yaml
+job.batch/memory-profile unchanged

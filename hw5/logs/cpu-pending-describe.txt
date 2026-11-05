@@ -1,0 +1,48 @@
+$ sudo k3s kubectl -n hw5 describe pod cpu-waiting
+Name:                 cpu-waiting
+Namespace:            hw5
+Priority:             -10
+Priority Class Name:  hw5-low
+Service Account:      default
+Node:                 <none>
+Labels:               <none>
+Annotations:          <none>
+Status:               Pending
+IP:                   
+IPs:                  <none>
+Containers:
+  task:
+    Image:      hw5-skills:1
+    Port:       <none>
+    Host Port:  <none>
+    Args:
+      hold
+      --seconds
+      900
+    Limits:
+      cpu:     1500m
+      memory:  128Mi
+    Requests:
+      cpu:        600m
+      memory:     64Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-8wdm2 (ro)
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:
+  kube-api-access-8wdm2:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason            Age   From               Message
+  ----     ------            ----  ----               -------
+  Warning  FailedScheduling  5s    default-scheduler  0/1 nodes are available: 1 Insufficient cpu. preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.

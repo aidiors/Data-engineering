@@ -1,0 +1,1785 @@
+{
+  "apiVersion": "v1",
+  "items": [
+    {
+      "action": "Scheduling",
+      "apiVersion": "v1",
+      "eventTime": "2026-11-05T15:01:27.193374Z",
+      "firstTimestamp": null,
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "cpu-waiting",
+        "namespace": "hw5",
+        "resourceVersion": "1436",
+        "uid": "aa50d94d-8daf-46d0-8228-ab9de2680552"
+      },
+      "kind": "Event",
+      "lastTimestamp": null,
+      "message": "0/1 nodes are available: 1 Insufficient cpu. preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T15:01:27Z",
+        "name": "cpu-waiting.18e52e41e8fba08e",
+        "namespace": "hw5",
+        "resourceVersion": "1437",
+        "uid": "5cf92e73-e070-461c-a27c-92be72cddef0"
+      },
+      "reason": "FailedScheduling",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "default-scheduler-hw5-node",
+      "source": {},
+      "type": "Warning"
+    },
+    {
+      "action": "Scheduling",
+      "apiVersion": "v1",
+      "eventTime": "2026-11-05T15:01:44.457528Z",
+      "firstTimestamp": null,
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "high-priority",
+        "namespace": "hw5",
+        "resourceVersion": "1445",
+        "uid": "11d20897-faef-4cbf-a3bf-8e9c28f6319b"
+      },
+      "kind": "Event",
+      "lastTimestamp": null,
+      "message": "0/1 nodes are available: 1 Insufficient cpu. preemption: found a potential placement for pod on node hw5-node, preempting 1 victims",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T15:01:44Z",
+        "name": "high-priority.18e52e45edffd5c3",
+        "namespace": "hw5",
+        "resourceVersion": "1447",
+        "uid": "98c00e86-7834-4604-80dd-a1b475040e22"
+      },
+      "reason": "FailedScheduling",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "default-scheduler-hw5-node",
+      "source": {},
+      "type": "Warning"
+    },
+    {
+      "action": "Binding",
+      "apiVersion": "v1",
+      "eventTime": "2026-11-05T15:01:57.121236Z",
+      "firstTimestamp": null,
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "high-priority",
+        "namespace": "hw5",
+        "resourceVersion": "1448",
+        "uid": "11d20897-faef-4cbf-a3bf-8e9c28f6319b"
+      },
+      "kind": "Event",
+      "lastTimestamp": null,
+      "message": "Successfully assigned hw5/high-priority to hw5-node",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T15:01:57Z",
+        "name": "high-priority.18e52e48e0d08d11",
+        "namespace": "hw5",
+        "resourceVersion": "1463",
+        "uid": "935221f9-877e-42e4-b3e3-ba2bbbe2c37a"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "default-scheduler-hw5-node",
+      "source": {},
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T15:02:15Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{task}",
+        "kind": "Pod",
+        "name": "high-priority",
+        "namespace": "hw5",
+        "resourceVersion": "1462",
+        "uid": "11d20897-faef-4cbf-a3bf-8e9c28f6319b"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T15:02:15Z",
+      "message": "Container image \"hw5-skills:1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T15:02:18Z",
+        "name": "high-priority.18e52e4d146c5daf",
+        "namespace": "hw5",
+        "resourceVersion": "1489",
+        "uid": "0204e648-cbff-4fda-a566-31f4ca16feb0"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T15:02:16Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{task}",
+        "kind": "Pod",
+        "name": "high-priority",
+        "namespace": "hw5",
+        "resourceVersion": "1462",
+        "uid": "11d20897-faef-4cbf-a3bf-8e9c28f6319b"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T15:02:16Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T15:02:21Z",
+        "name": "high-priority.18e52e4d69d48b5d",
+        "namespace": "hw5",
+        "resourceVersion": "1495",
+        "uid": "baed540f-857a-49ff-ae80-e856e29812e9"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T15:02:20Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{task}",
+        "kind": "Pod",
+        "name": "high-priority",
+        "namespace": "hw5",
+        "resourceVersion": "1462",
+        "uid": "11d20897-faef-4cbf-a3bf-8e9c28f6319b"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T15:02:20Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T15:02:22Z",
+        "name": "high-priority.18e52e4e4307b64f",
+        "namespace": "hw5",
+        "resourceVersion": "1499",
+        "uid": "d055910b-294c-4997-9c67-7abe5affb356"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "action": "Binding",
+      "apiVersion": "v1",
+      "eventTime": "2026-11-05T15:00:56.264956Z",
+      "firstTimestamp": null,
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "low-priority",
+        "namespace": "hw5",
+        "resourceVersion": "1412",
+        "uid": "7f16d21e-2e00-411a-ad76-70c53b21a94b"
+      },
+      "kind": "Event",
+      "lastTimestamp": null,
+      "message": "Successfully assigned hw5/low-priority to hw5-node",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T15:00:56Z",
+        "name": "low-priority.18e52e3ab57f6754",
+        "namespace": "hw5",
+        "resourceVersion": "1414",
+        "uid": "83506c09-7577-4f6e-80c1-c35d1ed518f5"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "default-scheduler-hw5-node",
+      "source": {},
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T15:01:06Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{task}",
+        "kind": "Pod",
+        "name": "low-priority",
+        "namespace": "hw5",
+        "resourceVersion": "1413",
+        "uid": "7f16d21e-2e00-411a-ad76-70c53b21a94b"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T15:01:06Z",
+      "message": "Container image \"hw5-skills:1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T15:01:06Z",
+        "name": "low-priority.18e52e3d0397ae32",
+        "namespace": "hw5",
+        "resourceVersion": "1420",
+        "uid": "5e90c74a-1c3d-45ba-9003-e33d5dccccf1"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T15:01:07Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{task}",
+        "kind": "Pod",
+        "name": "low-priority",
+        "namespace": "hw5",
+        "resourceVersion": "1413",
+        "uid": "7f16d21e-2e00-411a-ad76-70c53b21a94b"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T15:01:07Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T15:01:07Z",
+        "name": "low-priority.18e52e3d5dea39d6",
+        "namespace": "hw5",
+        "resourceVersion": "1422",
+        "uid": "5f7c5bb0-aa17-43bb-9aa7-0ddd49fbe021"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T15:01:14Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{task}",
+        "kind": "Pod",
+        "name": "low-priority",
+        "namespace": "hw5",
+        "resourceVersion": "1413",
+        "uid": "7f16d21e-2e00-411a-ad76-70c53b21a94b"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T15:01:14Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T15:01:16Z",
+        "name": "low-priority.18e52e3ef385b356",
+        "namespace": "hw5",
+        "resourceVersion": "1428",
+        "uid": "c8d2256c-4ef0-4670-8620-2a0a358f9bb2"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "action": "Preempting",
+      "apiVersion": "v1",
+      "eventTime": "2026-11-05T15:01:46.086014Z",
+      "firstTimestamp": null,
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "low-priority",
+        "namespace": "hw5",
+        "resourceVersion": "1431",
+        "uid": "7f16d21e-2e00-411a-ad76-70c53b21a94b"
+      },
+      "kind": "Event",
+      "lastTimestamp": null,
+      "message": "Preempted by pod 11d20897-faef-4cbf-a3bf-8e9c28f6319b on node hw5-node",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T15:01:46Z",
+        "name": "low-priority.18e52e464f150b42",
+        "namespace": "hw5",
+        "resourceVersion": "1454",
+        "uid": "8f742122-25a8-4e3e-bab7-238308ee733b"
+      },
+      "reason": "Preempted",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "default-scheduler-hw5-node",
+      "source": {},
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T15:01:46Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{task}",
+        "kind": "Pod",
+        "name": "low-priority",
+        "namespace": "hw5",
+        "resourceVersion": "1413",
+        "uid": "7f16d21e-2e00-411a-ad76-70c53b21a94b"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T15:01:46Z",
+      "message": "Stopping container task",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T15:01:46Z",
+        "name": "low-priority.18e52e465887c066",
+        "namespace": "hw5",
+        "resourceVersion": "1455",
+        "uid": "b784320e-a245-4e31-b11a-4911db575ec8"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "action": "Binding",
+      "apiVersion": "v1",
+      "eventTime": "2026-11-05T14:47:42.993768Z",
+      "firstTimestamp": null,
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "memory-oom-b95fd",
+        "namespace": "hw5",
+        "resourceVersion": "865",
+        "uid": "9770d5ed-9976-40f2-aa8a-2b0064fba5d1"
+      },
+      "kind": "Event",
+      "lastTimestamp": null,
+      "message": "Successfully assigned hw5/memory-oom-b95fd to hw5-node",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:47:43Z",
+        "name": "memory-oom-b95fd.18e52d8202d99668",
+        "namespace": "hw5",
+        "resourceVersion": "869",
+        "uid": "f2f6986d-a8a4-4789-80ea-9e189b46b95c"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "default-scheduler-hw5-node",
+      "source": {},
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:47:48Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{calculation}",
+        "kind": "Pod",
+        "name": "memory-oom-b95fd",
+        "namespace": "hw5",
+        "resourceVersion": "868",
+        "uid": "9770d5ed-9976-40f2-aa8a-2b0064fba5d1"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:47:48Z",
+      "message": "Container image \"hw5-skills:1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:47:48Z",
+        "name": "memory-oom-b95fd.18e52d8353b94a8b",
+        "namespace": "hw5",
+        "resourceVersion": "873",
+        "uid": "a98d990f-cf53-4719-8782-bbcb89b6d992"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:47:49Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{calculation}",
+        "kind": "Pod",
+        "name": "memory-oom-b95fd",
+        "namespace": "hw5",
+        "resourceVersion": "868",
+        "uid": "9770d5ed-9976-40f2-aa8a-2b0064fba5d1"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:47:49Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:47:49Z",
+        "name": "memory-oom-b95fd.18e52d8373783cf5",
+        "namespace": "hw5",
+        "resourceVersion": "875",
+        "uid": "896bfb17-616d-488c-b7f4-7074df7cd58c"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:47:51Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{calculation}",
+        "kind": "Pod",
+        "name": "memory-oom-b95fd",
+        "namespace": "hw5",
+        "resourceVersion": "868",
+        "uid": "9770d5ed-9976-40f2-aa8a-2b0064fba5d1"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:47:51Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:47:51Z",
+        "name": "memory-oom-b95fd.18e52d8405137a1d",
+        "namespace": "hw5",
+        "resourceVersion": "878",
+        "uid": "895dfa8e-7adf-4154-8af2-760b61dbb95d"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:50:02Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{calculation}",
+        "kind": "Pod",
+        "name": "memory-oom-b95fd",
+        "namespace": "hw5",
+        "resourceVersion": "868",
+        "uid": "9770d5ed-9976-40f2-aa8a-2b0064fba5d1"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:50:02Z",
+      "message": "Stopping container calculation",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:50:02Z",
+        "name": "memory-oom-b95fd.18e52da27206e194",
+        "namespace": "hw5",
+        "resourceVersion": "935",
+        "uid": "484110e7-9ea7-4059-bbcf-80b7d3bda72d"
+      },
+      "reason": "Killing",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "action": "Binding",
+      "apiVersion": "v1",
+      "eventTime": "2026-11-05T14:50:27.188609Z",
+      "firstTimestamp": null,
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "memory-oom-bq7g5",
+        "namespace": "hw5",
+        "resourceVersion": "954",
+        "uid": "53119821-af48-43c0-a5ee-1f198a636abe"
+      },
+      "kind": "Event",
+      "lastTimestamp": null,
+      "message": "Successfully assigned hw5/memory-oom-bq7g5 to hw5-node",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:50:27Z",
+        "name": "memory-oom-bq7g5.18e52da83d9fe6a1",
+        "namespace": "hw5",
+        "resourceVersion": "958",
+        "uid": "8f5d5fcc-3c9a-4048-9210-a223420a6043"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "default-scheduler-hw5-node",
+      "source": {},
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:50:36Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{calculation}",
+        "kind": "Pod",
+        "name": "memory-oom-bq7g5",
+        "namespace": "hw5",
+        "resourceVersion": "956",
+        "uid": "53119821-af48-43c0-a5ee-1f198a636abe"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:50:36Z",
+      "message": "Container image \"hw5-skills:1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:50:36Z",
+        "name": "memory-oom-bq7g5.18e52daa81777f22",
+        "namespace": "hw5",
+        "resourceVersion": "966",
+        "uid": "fc9d2678-6d6d-47ed-92c0-53f6d5cde55a"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:50:37Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{calculation}",
+        "kind": "Pod",
+        "name": "memory-oom-bq7g5",
+        "namespace": "hw5",
+        "resourceVersion": "956",
+        "uid": "53119821-af48-43c0-a5ee-1f198a636abe"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:50:37Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:50:37Z",
+        "name": "memory-oom-bq7g5.18e52daaaa72dfb8",
+        "namespace": "hw5",
+        "resourceVersion": "968",
+        "uid": "9fa59bf7-9db9-4721-ad42-62f40b629347"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:50:39Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{calculation}",
+        "kind": "Pod",
+        "name": "memory-oom-bq7g5",
+        "namespace": "hw5",
+        "resourceVersion": "956",
+        "uid": "53119821-af48-43c0-a5ee-1f198a636abe"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:50:39Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:50:39Z",
+        "name": "memory-oom-bq7g5.18e52dab25cb15cc",
+        "namespace": "hw5",
+        "resourceVersion": "969",
+        "uid": "e2312b93-ea58-40b4-b61f-27a75caa4958"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:47:42Z",
+      "involvedObject": {
+        "apiVersion": "batch/v1",
+        "kind": "Job",
+        "name": "memory-oom",
+        "namespace": "hw5",
+        "resourceVersion": "864",
+        "uid": "8dd153e1-5edb-4893-ad1a-89ed0864ae6b"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:47:42Z",
+      "message": "Created pod: memory-oom-b95fd",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:47:42Z",
+        "name": "memory-oom.18e52d81fb3cd4f2",
+        "namespace": "hw5",
+        "resourceVersion": "866",
+        "uid": "f8a6b372-0f9d-459d-a68a-c19690fd065b"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "job-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "job-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:50:27Z",
+      "involvedObject": {
+        "apiVersion": "batch/v1",
+        "kind": "Job",
+        "name": "memory-oom",
+        "namespace": "hw5",
+        "resourceVersion": "953",
+        "uid": "d46e168a-d685-43cf-b46b-c96e8d615e18"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:50:27Z",
+      "message": "Created pod: memory-oom-bq7g5",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:50:27Z",
+        "name": "memory-oom.18e52da8392dea7f",
+        "namespace": "hw5",
+        "resourceVersion": "957",
+        "uid": "75a4a185-7bc3-4023-acee-eb38c9737d81"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "job-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "job-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:50:54Z",
+      "involvedObject": {
+        "apiVersion": "batch/v1",
+        "kind": "Job",
+        "name": "memory-oom",
+        "namespace": "hw5",
+        "resourceVersion": "1007",
+        "uid": "d46e168a-d685-43cf-b46b-c96e8d615e18"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:50:54Z",
+      "message": "Job has reached the specified backoff limit",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:50:55Z",
+        "name": "memory-oom.18e52daeb0c2885f",
+        "namespace": "hw5",
+        "resourceVersion": "1012",
+        "uid": "e78d09b6-28af-4979-a3d1-f3c5c8501fc7"
+      },
+      "reason": "BackoffLimitExceeded",
+      "reportingComponent": "job-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "job-controller"
+      },
+      "type": "Warning"
+    },
+    {
+      "action": "Binding",
+      "apiVersion": "v1",
+      "eventTime": "2026-11-05T14:44:36.415720Z",
+      "firstTimestamp": null,
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "memory-profile-6kf6b",
+        "namespace": "hw5",
+        "resourceVersion": "767",
+        "uid": "5c3283b4-15c4-45c9-836e-10b48e7b4593"
+      },
+      "kind": "Event",
+      "lastTimestamp": null,
+      "message": "Successfully assigned hw5/memory-profile-6kf6b to hw5-node",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:44:36Z",
+        "name": "memory-profile-6kf6b.18e52d5691f09e71",
+        "namespace": "hw5",
+        "resourceVersion": "771",
+        "uid": "99dd7f72-08e8-4c23-b8ad-c0611612a9a1"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "default-scheduler-hw5-node",
+      "source": {},
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:44:47Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{calculation}",
+        "kind": "Pod",
+        "name": "memory-profile-6kf6b",
+        "namespace": "hw5",
+        "resourceVersion": "770",
+        "uid": "5c3283b4-15c4-45c9-836e-10b48e7b4593"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:44:47Z",
+      "message": "Container image \"hw5-skills:1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:44:47Z",
+        "name": "memory-profile-6kf6b.18e52d593d992f33",
+        "namespace": "hw5",
+        "resourceVersion": "777",
+        "uid": "3bb8b47c-6955-465d-b7f6-3e7965c04e59"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:44:49Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{calculation}",
+        "kind": "Pod",
+        "name": "memory-profile-6kf6b",
+        "namespace": "hw5",
+        "resourceVersion": "770",
+        "uid": "5c3283b4-15c4-45c9-836e-10b48e7b4593"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:44:49Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:44:49Z",
+        "name": "memory-profile-6kf6b.18e52d599255172c",
+        "namespace": "hw5",
+        "resourceVersion": "780",
+        "uid": "562639fe-ea26-4ed8-a30c-c8e076140f54"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:44:53Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{calculation}",
+        "kind": "Pod",
+        "name": "memory-profile-6kf6b",
+        "namespace": "hw5",
+        "resourceVersion": "770",
+        "uid": "5c3283b4-15c4-45c9-836e-10b48e7b4593"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:44:53Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:44:53Z",
+        "name": "memory-profile-6kf6b.18e52d5a71d520a0",
+        "namespace": "hw5",
+        "resourceVersion": "782",
+        "uid": "33558c31-da8b-44f1-bb6f-1278cd49e692"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:44:35Z",
+      "involvedObject": {
+        "apiVersion": "batch/v1",
+        "kind": "Job",
+        "name": "memory-profile",
+        "namespace": "hw5",
+        "resourceVersion": "766",
+        "uid": "b1250d9f-4608-4ba6-bd84-411b1dd2e6ca"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:44:35Z",
+      "message": "Created pod: memory-profile-6kf6b",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:44:35Z",
+        "name": "memory-profile.18e52d5654d43a81",
+        "namespace": "hw5",
+        "resourceVersion": "768",
+        "uid": "92f749a7-9619-42ba-abdc-d67dd3cc36b6"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "job-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "job-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:47:27Z",
+      "involvedObject": {
+        "apiVersion": "batch/v1",
+        "kind": "Job",
+        "name": "memory-profile",
+        "namespace": "hw5",
+        "resourceVersion": "853",
+        "uid": "b1250d9f-4608-4ba6-bd84-411b1dd2e6ca"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:47:27Z",
+      "message": "Job completed",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:47:27Z",
+        "name": "memory-profile.18e52d7e7603278c",
+        "namespace": "hw5",
+        "resourceVersion": "856",
+        "uid": "3871f49f-8c48-41db-872c-699c5f515f6a"
+      },
+      "reason": "Completed",
+      "reportingComponent": "job-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "job-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "action": "Binding",
+      "apiVersion": "v1",
+      "eventTime": "2026-11-05T14:51:08.422666Z",
+      "firstTimestamp": null,
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "memory-tuned-xldgm",
+        "namespace": "hw5",
+        "resourceVersion": "1025",
+        "uid": "3fb80a2b-056f-4347-a009-80d7fb508f79"
+      },
+      "kind": "Event",
+      "lastTimestamp": null,
+      "message": "Successfully assigned hw5/memory-tuned-xldgm to hw5-node",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:51:08Z",
+        "name": "memory-tuned-xldgm.18e52db1d75da894",
+        "namespace": "hw5",
+        "resourceVersion": "1029",
+        "uid": "2f70745e-da7d-4ed5-bada-74c570ff8f31"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "default-scheduler-hw5-node",
+      "source": {},
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:51:19Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{calculation}",
+        "kind": "Pod",
+        "name": "memory-tuned-xldgm",
+        "namespace": "hw5",
+        "resourceVersion": "1026",
+        "uid": "3fb80a2b-056f-4347-a009-80d7fb508f79"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:51:19Z",
+      "message": "Container image \"hw5-skills:1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:51:19Z",
+        "name": "memory-tuned-xldgm.18e52db45c330600",
+        "namespace": "hw5",
+        "resourceVersion": "1049",
+        "uid": "3ac651c1-79b8-4b31-9137-4a9ccde1ca2c"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:51:19Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{calculation}",
+        "kind": "Pod",
+        "name": "memory-tuned-xldgm",
+        "namespace": "hw5",
+        "resourceVersion": "1026",
+        "uid": "3fb80a2b-056f-4347-a009-80d7fb508f79"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:51:19Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:51:19Z",
+        "name": "memory-tuned-xldgm.18e52db47f2db80d",
+        "namespace": "hw5",
+        "resourceVersion": "1051",
+        "uid": "b7102472-7a54-488d-b33c-e873c135ba6d"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:51:21Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{calculation}",
+        "kind": "Pod",
+        "name": "memory-tuned-xldgm",
+        "namespace": "hw5",
+        "resourceVersion": "1026",
+        "uid": "3fb80a2b-056f-4347-a009-80d7fb508f79"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:51:21Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:51:21Z",
+        "name": "memory-tuned-xldgm.18e52db4f4d2a505",
+        "namespace": "hw5",
+        "resourceVersion": "1052",
+        "uid": "87624791-d5a3-4271-9c73-e7c6579b1ced"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:51:08Z",
+      "involvedObject": {
+        "apiVersion": "batch/v1",
+        "kind": "Job",
+        "name": "memory-tuned",
+        "namespace": "hw5",
+        "resourceVersion": "1024",
+        "uid": "4a972111-95e8-40e6-9cb7-2961dd07c549"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:51:08Z",
+      "message": "Created pod: memory-tuned-xldgm",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:51:08Z",
+        "name": "memory-tuned.18e52db1cbe7ae89",
+        "namespace": "hw5",
+        "resourceVersion": "1027",
+        "uid": "cb311f9f-091d-4eab-872a-8da3dff3a568"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "job-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "job-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:56:21Z",
+      "involvedObject": {
+        "apiVersion": "batch/v1",
+        "kind": "Job",
+        "name": "memory-tuned",
+        "namespace": "hw5",
+        "resourceVersion": "1295",
+        "uid": "4a972111-95e8-40e6-9cb7-2961dd07c549"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:56:21Z",
+      "message": "Job completed",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:56:21Z",
+        "name": "memory-tuned.18e52dfab7389ee5",
+        "namespace": "hw5",
+        "resourceVersion": "1298",
+        "uid": "7eabc041-18c2-41a7-b08c-57e217889d26"
+      },
+      "reason": "Completed",
+      "reportingComponent": "job-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "job-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "action": "Binding",
+      "apiVersion": "v1",
+      "eventTime": "2026-11-05T14:51:14.433231Z",
+      "firstTimestamp": null,
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "rustfs-7bdfb8f85f-5jznk",
+        "namespace": "hw5",
+        "resourceVersion": "979",
+        "uid": "9826c51d-eb0d-4505-92db-adf8b06ac59e"
+      },
+      "kind": "Event",
+      "lastTimestamp": null,
+      "message": "Successfully assigned hw5/rustfs-7bdfb8f85f-5jznk to hw5-node",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:51:14Z",
+        "name": "rustfs-7bdfb8f85f-5jznk.18e52db33da1caa2",
+        "namespace": "hw5",
+        "resourceVersion": "1041",
+        "uid": "46f6098d-4353-4b34-8375-67182bc05b68"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "default-scheduler-hw5-node",
+      "source": {},
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:51:26Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.initContainers{directories}",
+        "kind": "Pod",
+        "name": "rustfs-7bdfb8f85f-5jznk",
+        "namespace": "hw5",
+        "resourceVersion": "1040",
+        "uid": "9826c51d-eb0d-4505-92db-adf8b06ac59e"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:51:26Z",
+      "message": "Container image \"busybox:1.37\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:51:26Z",
+        "name": "rustfs-7bdfb8f85f-5jznk.18e52db5f34e6961",
+        "namespace": "hw5",
+        "resourceVersion": "1057",
+        "uid": "f381a83a-18db-4bf7-bd12-0f67586b134a"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:51:26Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.initContainers{directories}",
+        "kind": "Pod",
+        "name": "rustfs-7bdfb8f85f-5jznk",
+        "namespace": "hw5",
+        "resourceVersion": "1040",
+        "uid": "9826c51d-eb0d-4505-92db-adf8b06ac59e"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:51:26Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:51:26Z",
+        "name": "rustfs-7bdfb8f85f-5jznk.18e52db617a82b65",
+        "namespace": "hw5",
+        "resourceVersion": "1059",
+        "uid": "2e93e31c-f3ed-418e-b451-f9cc1bc35d09"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:51:29Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.initContainers{directories}",
+        "kind": "Pod",
+        "name": "rustfs-7bdfb8f85f-5jznk",
+        "namespace": "hw5",
+        "resourceVersion": "1040",
+        "uid": "9826c51d-eb0d-4505-92db-adf8b06ac59e"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:51:29Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:51:29Z",
+        "name": "rustfs-7bdfb8f85f-5jznk.18e52db6d8df0311",
+        "namespace": "hw5",
+        "resourceVersion": "1063",
+        "uid": "dffd6d08-a212-4b7e-ad3f-b015524a8b92"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:51:32Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{rustfs}",
+        "kind": "Pod",
+        "name": "rustfs-7bdfb8f85f-5jznk",
+        "namespace": "hw5",
+        "resourceVersion": "1040",
+        "uid": "9826c51d-eb0d-4505-92db-adf8b06ac59e"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:51:32Z",
+      "message": "Container image \"rustfs/rustfs:1.0.0\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:51:32Z",
+        "name": "rustfs-7bdfb8f85f-5jznk.18e52db781613ad6",
+        "namespace": "hw5",
+        "resourceVersion": "1067",
+        "uid": "d460a5a6-46b9-482c-94f0-728292f9925d"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:51:33Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{rustfs}",
+        "kind": "Pod",
+        "name": "rustfs-7bdfb8f85f-5jznk",
+        "namespace": "hw5",
+        "resourceVersion": "1040",
+        "uid": "9826c51d-eb0d-4505-92db-adf8b06ac59e"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:51:33Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:51:33Z",
+        "name": "rustfs-7bdfb8f85f-5jznk.18e52db7a5f98971",
+        "namespace": "hw5",
+        "resourceVersion": "1069",
+        "uid": "be885f65-609d-496a-aed1-4672b7d9a40e"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:51:36Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{rustfs}",
+        "kind": "Pod",
+        "name": "rustfs-7bdfb8f85f-5jznk",
+        "namespace": "hw5",
+        "resourceVersion": "1040",
+        "uid": "9826c51d-eb0d-4505-92db-adf8b06ac59e"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:51:36Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:51:36Z",
+        "name": "rustfs-7bdfb8f85f-5jznk.18e52db846781965",
+        "namespace": "hw5",
+        "resourceVersion": "1072",
+        "uid": "56fac931-cebb-43d6-946e-67b082b1772e"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:51:48Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{rustfs}",
+        "kind": "Pod",
+        "name": "rustfs-7bdfb8f85f-5jznk",
+        "namespace": "hw5",
+        "resourceVersion": "1040",
+        "uid": "9826c51d-eb0d-4505-92db-adf8b06ac59e"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:51:48Z",
+      "message": "Readiness probe failed: HTTP probe failed with statuscode: 503",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:51:48Z",
+        "name": "rustfs-7bdfb8f85f-5jznk.18e52dbb1242b7a4",
+        "namespace": "hw5",
+        "resourceVersion": "1078",
+        "uid": "0bdbee55-9d53-4476-9f05-fe06b9752973"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 24,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:52:48Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{rustfs}",
+        "kind": "Pod",
+        "name": "rustfs-7bdfb8f85f-5jznk",
+        "namespace": "hw5",
+        "resourceVersion": "1040",
+        "uid": "9826c51d-eb0d-4505-92db-adf8b06ac59e"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T15:02:04Z",
+      "message": "Readiness probe failed: Get \"http://10.42.0.11:9000/health/ready\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:52:48Z",
+        "name": "rustfs-7bdfb8f85f-5jznk.18e52dc937253dd5",
+        "namespace": "hw5",
+        "resourceVersion": "1478",
+        "uid": "07de06db-6a82-4131-aa84-26dd925acd48"
+      },
+      "reason": "Unhealthy",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Warning"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:50:45Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "rustfs-7bdfb8f85f",
+        "namespace": "hw5",
+        "resourceVersion": "977",
+        "uid": "275b97a1-98a0-44a9-85a5-a3bf6d4f0bcb"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:50:45Z",
+      "message": "Created pod: rustfs-7bdfb8f85f-5jznk",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:50:45Z",
+        "name": "rustfs-7bdfb8f85f.18e52dac85fc5f73",
+        "namespace": "hw5",
+        "resourceVersion": "982",
+        "uid": "30143fae-e7a2-4ee3-a543-6e0e71abf184"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "replicaset-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "replicaset-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:50:45Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "PersistentVolumeClaim",
+        "name": "rustfs-data",
+        "namespace": "hw5",
+        "resourceVersion": "974",
+        "uid": "2660a2ea-9d11-4f52-a445-adfce893ec96"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:50:45Z",
+      "message": "waiting for first consumer to be created before binding",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:50:45Z",
+        "name": "rustfs-data.18e52dac6c816881",
+        "namespace": "hw5",
+        "resourceVersion": "976",
+        "uid": "604574a1-e5e8-4b63-9dfe-5ac79ebd7ec8"
+      },
+      "reason": "WaitForFirstConsumer",
+      "reportingComponent": "persistentvolume-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "persistentvolume-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 4,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:50:46Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "PersistentVolumeClaim",
+        "name": "rustfs-data",
+        "namespace": "hw5",
+        "resourceVersion": "991",
+        "uid": "2660a2ea-9d11-4f52-a445-adfce893ec96"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:51:07Z",
+      "message": "Waiting for a volume to be created either by the external provisioner 'rancher.io/local-path' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:50:46Z",
+        "name": "rustfs-data.18e52dacc10f8868",
+        "namespace": "hw5",
+        "resourceVersion": "1023",
+        "uid": "f874cff7-d3d9-47bb-b17d-c6d3342290ae"
+      },
+      "reason": "ExternalProvisioning",
+      "reportingComponent": "persistentvolume-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "persistentvolume-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:50:46Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "PersistentVolumeClaim",
+        "name": "rustfs-data",
+        "namespace": "hw5",
+        "resourceVersion": "991",
+        "uid": "2660a2ea-9d11-4f52-a445-adfce893ec96"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:50:46Z",
+      "message": "External provisioner is provisioning volume for claim \"hw5/rustfs-data\"",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:50:47Z",
+        "name": "rustfs-data.18e52dacd7105c9c",
+        "namespace": "hw5",
+        "resourceVersion": "998",
+        "uid": "b34f111f-e445-4730-bad3-55e30f8583b9"
+      },
+      "reason": "Provisioning",
+      "reportingComponent": "rancher.io/local-path_local-path-provisioner-56c6584955-796m9_06b8d019-be95-44fd-8d8d-11aa89819beb",
+      "reportingInstance": "",
+      "source": {
+        "component": "rancher.io/local-path_local-path-provisioner-56c6584955-796m9_06b8d019-be95-44fd-8d8d-11aa89819beb"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:51:11Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "PersistentVolumeClaim",
+        "name": "rustfs-data",
+        "namespace": "hw5",
+        "resourceVersion": "991",
+        "uid": "2660a2ea-9d11-4f52-a445-adfce893ec96"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:51:11Z",
+      "message": "Successfully provisioned volume pvc-2660a2ea-9d11-4f52-a445-adfce893ec96",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:51:11Z",
+        "name": "rustfs-data.18e52db282fca52b",
+        "namespace": "hw5",
+        "resourceVersion": "1035",
+        "uid": "cc626e92-a6b3-40e3-96b4-1f5a44b66394"
+      },
+      "reason": "ProvisioningSucceeded",
+      "reportingComponent": "rancher.io/local-path_local-path-provisioner-56c6584955-796m9_06b8d019-be95-44fd-8d8d-11aa89819beb",
+      "reportingInstance": "",
+      "source": {
+        "component": "rancher.io/local-path_local-path-provisioner-56c6584955-796m9_06b8d019-be95-44fd-8d8d-11aa89819beb"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:50:45Z",
+      "involvedObject": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "rustfs",
+        "namespace": "hw5",
+        "resourceVersion": "975",
+        "uid": "21f3e08f-b293-4e01-9d0e-5935de28b791"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:50:45Z",
+      "message": "Scaled up replica set rustfs-7bdfb8f85f from 0 to 1",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:50:45Z",
+        "name": "rustfs.18e52dac812146f8",
+        "namespace": "hw5",
+        "resourceVersion": "978",
+        "uid": "55a7a9a6-f04a-4fe2-98b5-59102439d8c3"
+      },
+      "reason": "ScalingReplicaSet",
+      "reportingComponent": "deployment-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "deployment-controller"
+      },
+      "type": "Normal"
+    },
+    {
+      "action": "Binding",
+      "apiVersion": "v1",
+      "eventTime": "2026-11-05T14:52:07.988794Z",
+      "firstTimestamp": null,
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "seed-s3-spphj",
+        "namespace": "hw5",
+        "resourceVersion": "1094",
+        "uid": "e5ed3774-9749-442a-8e20-161299293699"
+      },
+      "kind": "Event",
+      "lastTimestamp": null,
+      "message": "Successfully assigned hw5/seed-s3-spphj to hw5-node",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:52:08Z",
+        "name": "seed-s3-spphj.18e52dbfb5c89c7a",
+        "namespace": "hw5",
+        "resourceVersion": "1098",
+        "uid": "4b77a0a9-56f6-41ba-afb6-d187d7ffbb72"
+      },
+      "reason": "Scheduled",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "default-scheduler-hw5-node",
+      "source": {},
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:52:16Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{seed}",
+        "kind": "Pod",
+        "name": "seed-s3-spphj",
+        "namespace": "hw5",
+        "resourceVersion": "1097",
+        "uid": "e5ed3774-9749-442a-8e20-161299293699"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:52:16Z",
+      "message": "Container image \"hw5-skills:1\" already present on machine and can be accessed by the pod",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:52:16Z",
+        "name": "seed-s3-spphj.18e52dc1b6de3a58",
+        "namespace": "hw5",
+        "resourceVersion": "1104",
+        "uid": "9c1625c2-85ca-4368-8424-1e30db8cbf9f"
+      },
+      "reason": "Pulled",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:52:17Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{seed}",
+        "kind": "Pod",
+        "name": "seed-s3-spphj",
+        "namespace": "hw5",
+        "resourceVersion": "1097",
+        "uid": "e5ed3774-9749-442a-8e20-161299293699"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:52:17Z",
+      "message": "Container created",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:52:17Z",
+        "name": "seed-s3-spphj.18e52dc1cff66eb6",
+        "namespace": "hw5",
+        "resourceVersion": "1106",
+        "uid": "df477326-d619-4b63-a181-d967886b6839"
+      },
+      "reason": "Created",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:52:19Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "fieldPath": "spec.containers{seed}",
+        "kind": "Pod",
+        "name": "seed-s3-spphj",
+        "namespace": "hw5",
+        "resourceVersion": "1097",
+        "uid": "e5ed3774-9749-442a-8e20-161299293699"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:52:19Z",
+      "message": "Container started",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:52:19Z",
+        "name": "seed-s3-spphj.18e52dc25929ac96",
+        "namespace": "hw5",
+        "resourceVersion": "1107",
+        "uid": "2d22075e-60bd-47d8-aded-f688a1c285ab"
+      },
+      "reason": "Started",
+      "reportingComponent": "kubelet",
+      "reportingInstance": "hw5-node",
+      "source": {
+        "component": "kubelet",
+        "host": "hw5-node"
+      },
+      "type": "Normal"
+    },
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-05T14:52:07Z",
+      "involvedObject": {
+        "apiVersion": "batch/v1",
+        "kind": "Job",
+        "name": "seed-s3",
+        "namespace": "hw5",
+        "resourceVersion": "1093",
+        "uid": "8d1d79c2-cb2d-4fe2-b5f5-6139b6edc539"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-05T14:52:07Z",
+      "message": "Created pod: seed-s3-spphj",
+      "metadata": {
+        "creationTimestamp": "2026-11-05T14:52:07Z",
+        "name": "seed-s3.18e52dbfa7102e0a",
+        "namespace": "hw5",
+        "resourceVersion": "1095",
+        "uid": "bb86cb1c-8815-4142-b423-80a165ea8ac0"
+      },
+      "reason": "SuccessfulCreate",
+      "reportingComponent": "job-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "job-controller"
+      },
+      "type": "Normal"
+    }
+  ],
+  "kind": "List",
+  "metadata": {
+    "resourceVersion": ""
+  }
+}
