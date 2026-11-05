@@ -1,0 +1,1 @@
+{"source": "C:\\Users\\Aidors\\Downloads\\it_vacancies_2024.csv", "source_sha256": "303db922b541e4440906f5a7e8be32fb55e8808f950ffddb8c272f1548212a65", "source_rows": 229388, "selected_rows": 6057, "prepared_sha256": "cf366b847fb5dc0bfae3b9d522368f1223ddfad76bc4ed1dce997e47beabcd03"}

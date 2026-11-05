@@ -1,0 +1,3 @@
+{"time": 1793863373.2941, "monotonic_ns": 81693671704700, "event": "ready", "fencing": 1, "port": 61936}
+{"time": 1793863398.3421965, "monotonic_ns": 81718720051400, "event": "published", "coordinator": "B", "epoch": 2, "pointer_version": 1, "message": "записал результат"}
+{"time": 1793863426.095375, "monotonic_ns": 81746473507500, "event": "rejected", "coordinator": "A", "epoch": 1, "error": "BadVersionError"}

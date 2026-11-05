@@ -1,0 +1,8 @@
+test_recovery_does_not_skip_or_duplicate_boundary_rows (test_calculation.CheckpointTests.test_recovery_does_not_skip_or_duplicate_boundary_rows) ... ok
+test_epoch_advance_rejects_old_writer_without_partial_publication (test_fencing_integration.ReceiverIntegrationTests.test_epoch_advance_rejects_old_writer_without_partial_publication) ... ok
+test_epoch_without_receiver_check_does_not_protect_the_pointer (test_fencing_integration.ReceiverIntegrationTests.test_epoch_without_receiver_check_does_not_protect_the_pointer) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.155s
+
+OK

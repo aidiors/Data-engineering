@@ -1,0 +1,15 @@
+Collecting kazoo==2.11.0 (from -r requirements.txt (line 1))
+  Using cached kazoo-2.11.0-py2.py3-none-any.whl.metadata (49 kB)
+Collecting psutil==7.2.2 (from -r requirements.txt (line 2))
+  Using cached psutil-7.2.2-cp37-abi3-win_amd64.whl.metadata (22 kB)
+Using cached kazoo-2.11.0-py2.py3-none-any.whl (150 kB)
+Using cached psutil-7.2.2-cp37-abi3-win_amd64.whl (137 kB)
+Installing collected packages: kazoo, psutil
+
+Successfully installed kazoo-2.11.0 psutil-7.2.2
+
+[notice] A new release of pip is available: 26.2.1 -> 26.3
+[notice] To update, run: C:\Users\Aidors\Documents\ChatGPT\Temp\hw-zookeeper\hw4\.venv\Scripts\python.exe -m pip install --upgrade pip
+openjdk version "17.0.21" 2026-10-20
+OpenJDK Runtime Environment Temurin-17.0.21+9 (build 17.0.21+9)
+OpenJDK 64-Bit Server VM Temurin-17.0.21+9 (build 17.0.21+9, mixed mode, sharing)
