@@ -1,0 +1,15 @@
+{"time": 1793863373.4860625, "monotonic_ns": 81693863669300, "event": "started", "pid": 19800, "requested_session_timeout_ms": 10000, "negotiated_session_timeout_ms": 10000}
+{"time": 1793863373.493435, "monotonic_ns": 81693871041400, "event": "leader", "epoch": 1}
+{"time": 1793863373.4969263, "monotonic_ns": 81693874532600, "event": "restored", "next_row": 0, "checkpoint": null}
+{"time": 1793863373.5278249, "monotonic_ns": 81693905432000, "event": "checkpoint", "next_row": 150, "epoch": 1, "checkpoint": {"file": "logs\\fencing-1-cap-5-20261105-102253\\objects\\3b332a96a0d18ca6ff17bbe16a45b691f29d1bf499316d75994e534cb8cb717e.json", "sha256": "3b332a96a0d18ca6ff17bbe16a45b691f29d1bf499316d75994e534cb8cb717e"}}
+{"time": 1793863373.8432195, "monotonic_ns": 81694220829700, "event": "checkpoint", "next_row": 300, "epoch": 1, "checkpoint": {"file": "logs\\fencing-1-cap-5-20261105-102253\\objects\\7ea4d1050f2282bcd35464a5bff8cf0d79850c11947d6e18f2502e06d80e469a.json", "sha256": "7ea4d1050f2282bcd35464a5bff8cf0d79850c11947d6e18f2502e06d80e469a"}}
+{"time": 1793863374.158997, "monotonic_ns": 81694536610100, "event": "checkpoint", "next_row": 450, "epoch": 1, "checkpoint": {"file": "logs\\fencing-1-cap-5-20261105-102253\\objects\\074e92bb9d1e5717fea828d1d7392951bed51d4e924c7ebd1b84b46e7e7f052e.json", "sha256": "074e92bb9d1e5717fea828d1d7392951bed51d4e924c7ebd1b84b46e7e7f052e"}}
+{"time": 1793863374.4755702, "monotonic_ns": 81694853186700, "event": "checkpoint", "next_row": 600, "epoch": 1, "checkpoint": {"file": "logs\\fencing-1-cap-5-20261105-102253\\objects\\4288313057f5cd8d6f94a1bb013023eaa6e17217fb12b41e949328fecf24caf5.json", "sha256": "4288313057f5cd8d6f94a1bb013023eaa6e17217fb12b41e949328fecf24caf5"}}
+{"time": 1793863414.5726228, "monotonic_ns": 81734950640200, "event": "session", "state": "SUSPENDED"}
+{"time": 1793863414.5868213, "monotonic_ns": 81734964838900, "event": "session", "state": "LOST"}
+{"time": 1793863414.5887706, "monotonic_ns": 81734966788000, "event": "checkpoint_rejected", "error": "SessionExpiredError", "epoch": 1}
+{"time": 1793863414.5906646, "monotonic_ns": 81734968682200, "event": "demo_stale_work_continues", "epoch": 1}
+{"time": 1793863414.6046355, "monotonic_ns": 81734982652900, "event": "session", "state": "CONNECTED"}
+{"time": 1793863426.0198019, "monotonic_ns": 81746397934500, "event": "publish_attempt", "coordinator": "A", "epoch": 1, "result": {"file": "logs\\fencing-1-cap-5-20261105-102253\\objects\\e931702beca364b08030ab988c5e905d298b1e1a05c3d1f958dace2d12e10dec.json", "sha256": "e931702beca364b08030ab988c5e905d298b1e1a05c3d1f958dace2d12e10dec"}}
+{"time": 1793863426.0989807, "monotonic_ns": 81746477113300, "event": "publication_rejected", "status": 409, "error": "BadVersionError"}
+{"time": 1793863426.1036677, "monotonic_ns": 81746481800300, "event": "session", "state": "LOST"}
